@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Prototyping with Python - UL HPC Tutorials</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Prototyping with Python";
+    var mkdocs_page_input_path = "advanced/Python/index.md";
+    var mkdocs_page_url = "/advanced/Python/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> UL HPC Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basic Tutorials</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/getting_started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/sequential_jobs/">HPC workflow with sequential jobs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Debug/">Efficient Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Software Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../EasyBuild/">Easybuild</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../RESIF/">RESIF</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>MPI / Performance Evaluation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../OSU_MicroBenchmarks/">OSU Micro-benchmarks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPL/">High Performance Linpack (HPL)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPCG/">High Performance Conjugate Gradient (HPCG)</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Mathematics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MATLAB1/README/">MATLAB</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../R/">R - statistical computing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Bioinformatics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Bioinformatics/">Running bioinformatics software</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Galaxy/">Galaxy</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel Debuggers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Allinea/">Allinea</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TotalView/">TotalView</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Virtualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Vagrant/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../vm5k/">Grid5000 - Automatic VM deployment with VM5K</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CFD/MD/Chemistry</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MultiPhysics/">Advanced Parallel execution</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Big Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Spark/">Big Data Application Over Apache Spark</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_workflows/README/">Advanced workflows on sequential jobs management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_scheduling/">Advanced scheduling with SLURM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Prototyping with Python</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ul-hpc-tutorial-advanced-prototyping-with-python">UL HPC Tutorial: [Advanced] Prototyping with Python</a></li>
+                
+                    <li><a class="toctree-l4" href="#examples-used-in-this-tutorial">Examples used in this tutorial</a></li>
+                
+                    <li><a class="toctree-l4" href="#python-usage">Python usage</a></li>
+                
+                    <li><a class="toctree-l4" href="#compare-version-of-python">Compare version of Python</a></li>
+                
+                    <li><a class="toctree-l4" href="#use-a-library-to-optimize-your-code">Use a library to optimize your code</a></li>
+                
+                    <li><a class="toctree-l4" href="#create-virtual-environment-to-switch-between-several-versions-of-a-package">Create virtual environment to switch between several versions of a package</a></li>
+                
+                    <li><a class="toctree-l4" href="#compile-your-code-in-c-language">Compile your code in C language</a></li>
+                
+                    <li><a class="toctree-l4" href="#use-scoop-to-parallelize-execution-of-your-python-code-with-slurm">Use Scoop to parallelize execution of your Python code with Slurm</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ReproducibleResearch/">Reproducible Research</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../rtfd/">Documentation (RTFD)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contacts/">Contacts</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">UL HPC Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Advanced topics &raquo;</li>
+        
+      
+    
+    <li>Prototyping with Python</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>-<em>- mode: markdown;mode:visual-line;  fill-column: 80 -</em>-</p>
+<p>Authors: Clément Parisot, Sarah Peter</p>
+<p>Copyright (c) 2017 UL HPC Team  -- see <a href="http://hpc.uni.lu">http://hpc.uni.lu</a></p>
+<hr />
+<h1 id="ul-hpc-tutorial-advanced-prototyping-with-python">UL HPC Tutorial: [Advanced] Prototyping with Python</h1>
+<p><a href="https://hpc.uni.lu"><img alt="By ULHPC" src="https://img.shields.io/badge/by-ULHPC-blue.svg" /></a> <a href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licence" src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" /></a> <a href="https://github.com/ULHPC/tutorials/issues/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ULHPC/tutorials.svg" /></a> <a href="https://github.com/ULHPC/tutorials/raw/devel/advanced/Python/tutorial_python.pdf"><img alt="" src="https://img.shields.io/badge/slides-PDF-red.svg" /></a> <a href="https://github.com/ULHPC/tutorials/tree/devel/advanced/Python/"><img alt="Github" src="https://img.shields.io/badge/sources-github-green.svg" /></a> <a href="http://ulhpc-tutorials.readthedocs.io/en/latest/advanced/Python/"><img alt="Documentation Status" src="http://readthedocs.org/projects/ulhpc-tutorials/badge/?version=latest" /></a> <a href="https://github.com/ULHPC/tutorials"><img alt="GitHub forks" src="https://img.shields.io/github/stars/ULHPC/tutorials.svg?style=social&amp;label=Star" /></a></p>
+<p><a href="https://github.com/ULHPC/tutorials/raw/devel/advanced/Python/tutorial_python.pdf"><img alt="" src="https://github.com/ULHPC/tutorials/raw/devel/advanced/Python/cover_slides.png" /></a></p>
+<p>Python is a high-level interpreted language widely used in research. It lets you work quickly and comes with a lot of available packages which give more useful functionalities.</p>
+<p>In this tutorial, we are going to explain the steps to run a Python script on the cluster and install a Python package as a user. We will also create a virtual environment and switch from one to the other. We will show how to use different versions of Python on a node. Finally, we will parallelize your code with Scoop and compile it in C to fasten its execution.</p>
+<h2 id="examples-used-in-this-tutorial">Examples used in this tutorial</h2>
+<h3 id="example-1">Example 1</h3>
+<p>The first example used in this tutorial is fully inspired from <a href="https://github.com/mattfowler/PythonCExtensions">PythonCExtensions</a>. This code simply computes the mean value of an array of random numbers. The naïve code used to compute the mean of an array is:</p>
+<pre><code class="example1.py">def mean(lst):
+    return sum(lst) / len(lst)
+
+
+def standard_deviation(lst):
+    m = mean(lst)
+    variance = sum([(value - m) ** 2 for value in lst])
+    return math.sqrt(variance / len(lst))
+</code></pre>
+
+<p>The variable will be the size of the array on which we want to compute the mean. The idea is to reduce the time used to compute this value by using libraries (<strong>numpy</strong>) or compile the code in C.</p>
+<h3 id="example-2">Example 2</h3>
+<p>The second example used in this tutorial comes from <a href="http://scoop.readthedocs.io/en/0.7/examples.html#computation-of">Scoop example computation of pi</a>. We will use a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte-Carlo method</a> to compute the value of pi. As written in the Scoop documentation, it spawns two pseudo-random numbers that are fed to the hypot function which calculates the hypotenuse of its parameters. This step computes the Pythagorean equation (\sqrt{x^2+y^2}) of the given parameters to find the distance from the origin (0,0) to the randomly placed point (which X and Y values were generated from the two pseudo-random values). Then, the result is compared to one to evaluate if this point is inside or outside the unit disk. If it is inside (have a distance from the origin lesser than one), a value of one is produced (red dots in the figure), otherwise the value is zero (blue dots in the figure). The experiment is repeated <em>tries</em> number of times with new random values.</p>
+<p><img alt="alt text" src="http://scoop.readthedocs.io/en/0.7/_images/monteCarloPiExample.gif" title="Monte-Carlo pi calculation example" /></p>
+<p>The variable here will be the number of workers (cores on which the script runs) compared to the time of execution.</p>
+<h2 id="python-usage">Python usage</h2>
+<p>In this part we will simply run our Python script on the UL HPC platform, on a single node.</p>
+<h3 id="get-all-the-scripts">Get all the scripts</h3>
+<p>Clone the UL HPC python tutorial under your home directory on the <strong>Iris</strong> cluster. If you have cloned it before, simply run <code>git pull</code> to update it to the latest version.</p>
+<pre><code>(laptop)$&gt; ssh iris-cluster
+(access)$&gt; git clone https://github.com/ULHPC/tutorials.git
+(access)$&gt; cd tutorials/
+(access)$&gt; git stash &amp;&amp; git pull -r &amp;&amp; git stash pop
+</code></pre>
+
+<p>All the scripts used in this tutorial can be found under <code>tutorials/advanced/Python/</code>.</p>
+<h3 id="execute-your-first-python-script-on-the-cluster-example-1">Execute your first python script on the cluster (Example 1)</h3>
+<p>First, connect to <code>iris-cluster</code> and go to example 1:</p>
+<pre><code>(laptop)$&gt; ssh iris-cluster
+(access)$&gt; cd tutorials/advanced/Python/example1/
+</code></pre>
+
+<p>To run your script <strong>interactively</strong> on the cluster, you should do:</p>
+<pre><code>(access)&gt;$ si
+(iris-001)$&gt; python example1.py
+</code></pre>
+
+<p>You should see the output of your script directly written in your terminal. It prints the length of the array and the number of seconds it took to compute the standard deviation 10,000 times.</p>
+<p>To run your script in a <strong>passive</strong> way, you should create a batch script to run your python script.</p>
+<ul>
+<li>Create a <code>example1.sh</code> file under <code>tutorials/advanced/Python/example1/</code>.</li>
+<li>Edit it by using your favorite editor (<code>vim</code>, <code>nano</code>, <code>emacs</code>...)</li>
+<li>Add a shebang at the beginning (<code>#!/bin/bash</code>)</li>
+<li>Add <strong>#SBATCH</strong> parameters (see <a href="https://hpc.uni.lu/users/docs/slurm.html">Slurm documentation</a>)</li>
+<li><code>1</code> core</li>
+<li><code>example1</code> name</li>
+<li>maximum <code>10m</code> walltime</li>
+<li>logfile under <code>example1.out</code></li>
+</ul>
+<p>Now run the script using</p>
+<pre><code>(access)$&gt; sbatch example1.sh
+</code></pre>
+
+<p>Now, check that the content of <code>example1.out</code> corresponds to the expected output (in interactive mode).</p>
+<p><strong>HINT:</strong> You can find the answer under <code>tutorials/advanced/Python/example1/example1.sh.answer</code>.</p>
+<h2 id="compare-version-of-python">Compare version of Python</h2>
+<p>You can switch between several version of Python that are already install on UL HPC iris cluster. To list the versions available, you should use this command on a compute node:</p>
+<pre><code>(iris-001)$&gt; module spider Python
+</code></pre>
+
+<p><strong>QUESTIONS:</strong></p>
+<ul>
+<li>What are the versions of Python available on Iris cluster ? On Gaia cluster ?</li>
+<li>Which toolchains have been used to build them ?</li>
+</ul>
+<p>Here we will compare the performance of Python 2.7 and Python 3.</p>
+<p>Here are the steps to compare 2 codes:</p>
+<ul>
+<li>Go to <code>tutorials/advanced/Python/example2</code></li>
+<li>Create a batch script named <code>example2.sh</code></li>
+<li>Edit it with your favorite editor (<code>vim</code>, <code>nano</code>, <code>emacs</code>...)</li>
+<li>Add a shebang at the beginning (<code>#!/bin/bash</code>)</li>
+<li>Add <strong>#SBATCH</strong> parameters</li>
+<li><code>1</code> core</li>
+<li><code>example2</code> name</li>
+<li>maximum <code>10m</code> walltime</li>
+<li>logfile under <code>example2.out</code></li>
+<li>Load Python version 2.7</li>
+<li>Execute the script a first time with this version of Python</li>
+<li>Load Python version 3</li>
+<li>Execute the script a second time with this Python version.</li>
+<li>Check the content of the file <code>example2.out</code> and identify the 2 executions and the module load.</li>
+</ul>
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>What is the fastest version of Python ?</li>
+<li>There are both <code>foss</code> and <code>intel</code> compiled versions of Python available on the Iris cluster. Modify your script to compare their execution time. Which is the fastest one ?</li>
+</ul>
+<p><strong>HINT</strong></p>
+<ul>
+<li>You can use <code>module load</code> command to load a specific version of Python.</li>
+<li>An example of a BATCH script can be found under <code>tutorials/advanced/Python/example2/example2.sh.answer</code></li>
+</ul>
+<h2 id="use-a-library-to-optimize-your-code">Use a library to optimize your code</h2>
+<p>In this part we will try to use <a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html">Numpy</a>, a Python library, to optimize our code.</p>
+<p>In <code>tutorials/advanced/Python/example3/example3.py</code> you should see a version of the previous script using Numpy.</p>
+<p>Try to execute the script on iris cluster in <strong>interactive</strong> mode.</p>
+<pre><code>(access)$&gt; si
+(iris-001)$&gt; python example3.py
+</code></pre>
+
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>Why did the execution fail ? What is the problem ?</li>
+</ul>
+<p>We need to install the numpy library. Hopefully, numpy is available as a module on iris cluster. Use the commands from <code>example2</code> to:</p>
+<ul>
+<li>Load <code>numpy</code> module</li>
+<li>Execute your script on the node</li>
+</ul>
+<pre><code>(access)$&gt; si
+(iris-001)$&gt; module spider numpy
+(iris-001)$&gt; module load math/numpy
+(iris-001)$&gt; python example3.py
+</code></pre>
+
+<p>As you can see, there is only one version of numpy available with module. If we want to use a more recent or older version of numpy, we can install it ourselves in our home directory. For that we will use the <code>pip</code> tool.</p>
+<p><code>pip</code> is a package manager for Python. With this tool you can manage Python packages easily: install, uninstall, list, search packages or upgrade them. If you specify the <code>--user</code> parameter, the package will be installed under <strong>your home directory</strong> and will be available on all the compute nodes. Let's install numpy using <code>pip</code>.</p>
+<pre><code>(access)$&gt; si
+(iris-001)$&gt; pip install --user numpy==1.13.0
+(iris-001)$&gt; python -c &quot;import numpy as np; print np.__version__&quot;
+</code></pre>
+
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>Which execution is faster between <em>numpy</em> code (example3.py) and <em>naïve</em> code (example1.py) ?</li>
+<li>Why do you think that numpy is not as powerful as intended ? Which parameter can we change to compare the performances ?</li>
+</ul>
+<h2 id="create-virtual-environment-to-switch-between-several-versions-of-a-package">Create virtual environment to switch between several versions of a package</h2>
+<p>Here comes a very specific case. Sometimes you have to use tools which depend on a specific version of a package. You probably don't want to uninstall and reinstall the package with <code>pip</code> each time you want to use one tool or the other.</p>
+<p>Virtualenv allows you to create several environments which will contain their own list of Python packages. The basic usage is to <strong>create one virtual environment per project</strong>.</p>
+<p>In this tutorial we will create a new virtual environment for the previous code in order to install a different version of numpy and check the performances of our code with it.</p>
+<p>First of all, install <code>virtualenv</code> package using pip:</p>
+<pre><code>(access)$&gt; si
+(iris-001)$&gt; pip install --user virtualenv
+</code></pre>
+
+<p>Now you can create your environment for this project. Name it <code>numpy12</code>.</p>
+<pre><code>(iris-001)$&gt; cd ~/tutorials/advanced/Python/example3/
+(iris-001)$&gt; virtualenv numpy12
+</code></pre>
+
+<p>So now you should be able to active this environment with this <code>source</code> command. Please notice the <code>(numpy12)</code> present in your prompt that indicates that the <code>numpy12</code> environment is active.</p>
+<pre><code>(iris-001)$&gt; source numpy12/bin/activate
+(numpy12)(iris-001)$&gt;
+</code></pre>
+
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>Using <code>pip freeze</code>, what are the modules available before the activation of your virtual environment ?</li>
+<li>What are the module available after ?</li>
+<li>What version of python is used inside the virtual environment ? Where is it located ? (You can use <code>which</code> command.)</li>
+</ul>
+<p>To exit a virtual environment run the <code>deactivate</code> command.</p>
+<p>So now, we can install a different numpy version inside our virtual environment. Check that the version installed corresponds to numpy 1.12.</p>
+<pre><code>(iris-001)$&gt; source numpy12/bin/activate
+(numpy12)(iris-001)$&gt; pip install numpy==1.12
+(numpy12)(iris-001)$&gt; python -c &quot;import numpy as np; print np.__version__&quot;
+(numpy12)(iris-001)$&gt; deactivate
+(iris-001) python -c &quot;import numpy as np; print np.__version__&quot;
+</code></pre>
+
+<p>Now you can adapt your script to load the right virtualenv and compare the performance of different versions of numpy.</p>
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>Check the size of numpy12 folder. Why is it so big ? What does it contain ?</li>
+</ul>
+<h2 id="compile-your-code-in-c-language">Compile your code in C language</h2>
+<p>C language is known to be very powerful and to execute faster. It has to be compiled (typically using GCC compiler) to be executed. There exist many tools that can convert your Python code to C code to benefit from its performances (<strong>Cython</strong>, <strong>Pythran</strong>, ...).</p>
+<p>The goal of this part is to adapt our naïve code and use the <strong>Pythran</strong> tool to convert it to C code. This code will then be imported as a standard Python module and executed.</p>
+<p>The code can be found under <code>tutorials/advanced/Python/example4/example4.py</code>.</p>
+<ul>
+<li>Open the <code>example4.py</code> file</li>
+<li>Referring to <a href="https://github.com/serge-sans-paille/pythran">Pythran documentation</a>, add a comment before the <code>standard_deviation</code> function to help pythran to convert your python function into a C one.</li>
+<li>Parameter should be a list of float</li>
+<li>Function name should be <code>standard_dev</code></li>
+</ul>
+<pre><code>#code to insert in example4.py
+
+#pythran export standard_dev(float list)
+def standard_dev(lst):
+</code></pre>
+
+<ul>
+<li>Be sure to have <code>pythran</code> installed! If not, use <code>pip install --user pythran</code> command (within a job) to install it in your home directory.</li>
+<li>Compile your code using pythran:</li>
+</ul>
+<pre><code>(iris-001)$&gt; pythran example4.py -o std.so # NEVER COMPILE ON ACCESS
+(iris-001)$&gt; python -c &quot;import std&quot; # this imports the newly generated module with C implementation
+</code></pre>
+
+<ul>
+<li>Have a look at <code>c_compare.py</code> that contains the code to </li>
+<li>import your module</li>
+<li>and execute the mean function from this module on a random array</li>
+<li>Execute your code on a node and compare the execution time to the other one.</li>
+</ul>
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>What is the fastest execution ? Why ?</li>
+<li>Where can I find the code that has been generated from my Python script ?</li>
+</ul>
+<p><strong>HINT:</strong> If you run <code>pythran example4.py -e -o std.c</code> it will generate the C code. Have a look at the <code>*.c</code> files in your directory.</p>
+<h2 id="use-scoop-to-parallelize-execution-of-your-python-code-with-slurm">Use Scoop to parallelize execution of your Python code with Slurm</h2>
+<p>In this part, we will use Scoop library to parallelize our Python code and execute it on iris cluster. This example uses the Monte-Carlo algorithm to compute the value of pi. Please have a look at the top of this page to check how it works.</p>
+<p>We will first have to install the scoop library using <code>pip</code>:</p>
+<pre><code>(access)$&gt; si
+(iris-001)$&gt; pip install --user filelock
+(iris-001)$&gt; pip install --user https://github.com/soravux/scoop/archive/master.zip
+</code></pre>
+
+<p>Scoop comes with direct Slurm bindings. If you run your code on a single node, it will try to use the most cores that it can. If you have reserved several nodes, it will use all the nodes of your reservation and distribute work on it.</p>
+<p>You can specify the number of cores to use with the <code>-n</code> option in scoop.</p>
+<p>We will write a batch script to execute our python script. We want to compare time of execution to the number of workers used in scoop. We want to go from 1 worker (single core) to 50 workers, increasing the worker number 1 by 1. As you can see, our script takes 1 parameter <code>x</code> in input which corresponds to the number of workers.</p>
+<p>The batch script should contain:</p>
+<ul>
+<li>50 tasks reserved</li>
+<li>maximum execution time of 35m</li>
+<li>name of the job should be <code>scoop</code></li>
+<li>a job array which goes from 1 to 50</li>
+<li>a minimum number of 2 nodes reserved</li>
+<li>a call to <code>python -m scoop [...]</code> to call the script with increasing number of cores reserved (<code>$SLURM_ARRAY_TASK_ID</code>)</li>
+<li>a command to disable concurrent run of this job</li>
+<li>output file should go to <code>scoop.log</code></li>
+</ul>
+<p><strong>HINT</strong> Have a look at <code>tutorials/advanced/Python/example5/scoop.sh</code> for the batch script example</p>
+<p>Run this script with <code>sbatch</code> command. Check the content of <code>scoop.log</code> using <code>tail scoop.log</code> to see if everything is going well.</p>
+<p>When your job is over, you can use <code>make graph</code> command to generate the graph.</p>
+<p><strong>QUESTIONS</strong></p>
+<ul>
+<li>What is the correlation between number of workers and execution time ?</li>
+<li>Use what you learned in the previous part to optimize your code!</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ReproducibleResearch/" class="btn btn-neutral float-right" title="Reproducible Research">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../advanced_scheduling/" class="btn btn-neutral" title="Advanced scheduling with SLURM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../advanced_scheduling/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ReproducibleResearch/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

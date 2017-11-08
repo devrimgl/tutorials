@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>UL HPC Tutorials</title>
+  
+
+  <link rel="shortcut icon" href="./img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> UL HPC Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Home</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ul-hpc-tutorials">UL HPC Tutorials</a></li>
+                
+                    <li><a class="toctree-l4" href="#list-of-contributors">List of contributors</a></li>
+                
+                    <li><a class="toctree-l4" href="#issues-feature-request">Issues / Feature request</a></li>
+                
+                    <li><a class="toctree-l4" href="#developments-contributing-to-the-code">Developments / Contributing to the code</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basic Tutorials</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="basic/getting_started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="basic/sequential_jobs/">HPC workflow with sequential jobs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Debug/">Efficient Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Software Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/EasyBuild/">Easybuild</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/RESIF/">RESIF</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>MPI / Performance Evaluation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/OSU_MicroBenchmarks/">OSU Micro-benchmarks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/HPL/">High Performance Linpack (HPL)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/HPCG/">High Performance Conjugate Gradient (HPCG)</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Mathematics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/MATLAB1/README/">MATLAB</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/R/">R - statistical computing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Bioinformatics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Bioinformatics/">Running bioinformatics software</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Galaxy/">Galaxy</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel Debuggers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Allinea/">Allinea</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/TotalView/">TotalView</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Virtualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Vagrant/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/vm5k/">Grid5000 - Automatic VM deployment with VM5K</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CFD/MD/Chemistry</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/MultiPhysics/">Advanced Parallel execution</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Big Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Spark/">Big Data Application Over Apache Spark</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/advanced_workflows/README/">Advanced workflows on sequential jobs management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/advanced_scheduling/">Advanced scheduling with SLURM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/Python/">Prototyping with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="advanced/ReproducibleResearch/">Reproducible Research</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="rtfd/">Documentation (RTFD)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="contacts/">Contacts</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">UL HPC Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>-<em>- mode: markdown; mode: visual-line;  -</em>-</p>
+<h1 id="ul-hpc-tutorials">UL HPC Tutorials</h1>
+<p><a href="https://hpc.uni.lu"><img alt="By ULHPC" src="https://img.shields.io/badge/by-ULHPC-blue.svg" /></a> <a href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licence" src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" /></a> <a href="https://github.com/ULHPC/tutorials/issues/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ULHPC/tutorials.svg" /></a> <a href="https://github.com/ULHPC/tutorials/"><img alt="Github" src="https://img.shields.io/badge/sources-github-green.svg" /></a> <a href="http://ulhpc-tutorials.readthedocs.io"><img alt="Documentation Status" src="http://readthedocs.org/projects/ulhpc-tutorials/badge/?version=latest" /></a> <a href="https://github.com/ULHPC/tutorials"><img alt="GitHub forks" src="https://img.shields.io/github/stars/ULHPC/tutorials.svg?style=social&amp;label=Star" /></a></p>
+<blockquote>
+<p>Copyright (c) 2015-2017 UL HPC Team <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#45;&#115;&#121;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#64;&#117;&#110;&#105;&#46;&#108;&#117;">&#104;&#112;&#99;&#45;&#115;&#121;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#64;&#117;&#110;&#105;&#46;&#108;&#117;</a></p>
+</blockquote>
+<p>This repository holds a set of tutorials to help the users of the <a href="https://hpc.uni.lu">UL HPC</a> platform to better understand or simply use our platform.
+The list of proposed tutorials are evolving and are used on a regular basis during the <a href="http://hpc.uni.lu/hpc-school/">UL HPC School</a> we organise.
+So far, the following tutorials are proposed:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Category</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Level</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Basic</em></td>
+<td><a href="./basic/getting_started/">Getting Started on the UL HPC platform</a></td>
+<td>beginners</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./basic/sequential_jobs/">HPC workflow with sequential jobs</a></td>
+<td>beginners</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/Debug/">Know Your Bugs: Weapons for Efficient Debugging</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>Software Management</em></td>
+<td><a href="./advanced/EasyBuild/">Building [custom] software with EasyBuild</a></td>
+<td>beginners</td>
+</tr>
+<tr>
+<td align="center"><em>MPI</em></td>
+<td><a href="./advanced/OSU_MicroBenchmarks/">UL HPC MPI Tutorial: OSU Micro-Benchmarks</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/HPL/">High-Performance Linpack (HPL) benchmarking on UL HPC platform</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/HPCG/">HPCG benchmarking on UL HPC platform</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>Mathematics</em></td>
+<td><a href="./advanced/MATLAB1/">MATLAB execution on the UL HPC platform</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/R/">R / Statictical Computing</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>Bioinformatics</em></td>
+<td><a href="./advanced/Bioinformatics/">Bioinformatics software on the UL HPC platform</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/Galaxy/">Galaxy Introduction Exercise: From Peaks to Genes</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>Parallel Debuging</em></td>
+<td><a href="./advanced/Allinea/">Unified profiling and debugging with Allinea</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/TotalView/">Direct,  Reverse and parallel Memory debugging with TotalView</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>Virtualization</em></td>
+<td><a href="./advanced/Vagrant/">Create and reproduce work environments using Vagrant</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/vm5k/">Deploying virtual machines with Vm5k on Grid'5000</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>CFD/MD/Chemistry</em></td>
+<td><a href="./advanced/MultiPhysics/">Running parallel software: test cases on CFD / MD / Chemistry applications</a></td>
+<td>advanced</td>
+</tr>
+<tr>
+<td align="center"><em>Big Data</em></td>
+<td><a href="./advanced/Spark/">Running Big Data Application using Apache Spark on UL HPC platform</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"><em>Misc</em></td>
+<td><a href="./advanced/advanced_workflows/">Advanced workflows on sequential jobs management</a></td>
+<td>advanced</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/advanced_scheduling/">Advanced scheduling with SLURM</a></td>
+<td>intermediate</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/Python/">[Advanced] Prototyping with Python</a></td>
+<td>advanced</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td><a href="./advanced/ReproducibleResearch/">Reproducible Research at the Cloud Era</a></td>
+<td>intermediate</td>
+</tr>
+</tbody>
+</table>
+<h2 id="list-of-contributors">List of contributors</h2>
+<p>The material provided in this reporitory is benefiting from the contributions of the following persons:</p>
+<ul>
+<li>The UL HPC Team of course, <em>i.e.</em>:<ul>
+<li>Dr. <a href="https://varrette.gforge.uni.lu">Sebastien Varrette</a>,  Research Scientist, <a href="http://hpc.uni.lu">UL HPC</a> Manager</li>
+<li>Valentin Plugaru, MSc, Research Collaborator</li>
+<li>Sarah Peter (formally Sarah Diehl), MSc, Research Associate</li>
+<li>Hyacinthe Cartiaux,</li>
+<li>Clément Parisot</li>
+</ul>
+</li>
+<li>Dr. Joseph Emeras, Research Associate</li>
+<li>Dr. Xavier Besseron, Research Scientist</li>
+<li>Dr. Aurelien Ginolhac, Research Scientist</li>
+<li>Maxime Schmitt</li>
+</ul>
+<p>In the advent where you want to contribute yourself to these tutorials, do not hesitate! See below for instructions.</p>
+<h2 id="issues-feature-request">Issues / Feature request</h2>
+<p>You can submit bug / issues / feature request using the <a href="https://github.com/ULHPC/tutorials/issues">ULHPC/tutorials Tracker</a>.
+See also <a href="./docs/contributing/"><code>docs/contributing/</code></a> for further information.</p>
+<h2 id="developments-contributing-to-the-code">Developments / Contributing to the code</h2>
+<p>If you want to contribute to the code, you shall be aware of the way this module is organized.
+These elements are detailed on <a href="contributing/"><code>docs/contributing.md</code></a>.</p>
+<p>You are more than welcome to contribute to its development by <a href="https://help.github.com/articles/using-pull-requests">sending a pull request</a>.</p>
+<h3 id="online-documentation">Online Documentation</h3>
+<p><a href="https://readthedocs.org/">Read the Docs</a> aka RTFD hosts documentation for the open source community and the <a href="https://github.com/ULHPC/tutorials">ULHPC/sysadmins</a> has its documentation (see the <code>docs/</code> directly) hosted on <a href="http://ulhpc-tutorials.rtfd.org">readthedocs</a>.</p>
+<p>See <a href="rtfd/"><code>docs/rtfd.md</code></a> for more details.</p>
+<h3 id="licence">Licence</h3>
+<p>This project and the sources proposed within this repository are released under the terms of the <a href="./LICENCE">GPL-3.0</a> licence.</p>
+<p><a href="./LICENSE"><img alt="Licence" src="https://www.gnu.org/graphics/gplv3-88x31.png" /></a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basic/getting_started/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="basic/getting_started/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.15.3
+Build Date UTC : 2017-11-08 21:25:56
+-->

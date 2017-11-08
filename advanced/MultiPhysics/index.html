@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Advanced Parallel execution - UL HPC Tutorials</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Advanced Parallel execution";
+    var mkdocs_page_input_path = "advanced/MultiPhysics/index.md";
+    var mkdocs_page_url = "/advanced/MultiPhysics/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> UL HPC Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basic Tutorials</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/getting_started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/sequential_jobs/">HPC workflow with sequential jobs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Debug/">Efficient Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Software Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../EasyBuild/">Easybuild</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../RESIF/">RESIF</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>MPI / Performance Evaluation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../OSU_MicroBenchmarks/">OSU Micro-benchmarks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPL/">High Performance Linpack (HPL)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPCG/">High Performance Conjugate Gradient (HPCG)</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Mathematics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MATLAB1/README/">MATLAB</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../R/">R - statistical computing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Bioinformatics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Bioinformatics/">Running bioinformatics software</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Galaxy/">Galaxy</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel Debuggers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Allinea/">Allinea</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TotalView/">TotalView</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Virtualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Vagrant/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../vm5k/">Grid5000 - Automatic VM deployment with VM5K</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CFD/MD/Chemistry</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Advanced Parallel execution</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ul-hpc-mpi-tutorial-running-parallel-software-test-cases-on-cfd-md-chemistry-applications">UL HPC MPI Tutorial: Running parallel software: test cases on CFD / MD / Chemistry applications</a></li>
+                
+                    <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
+                
+                    <li><a class="toctree-l4" href="#basics">Basics</a></li>
+                
+                    <li><a class="toctree-l4" href="#quantumespresso">QuantumESPRESSO</a></li>
+                
+                    <li><a class="toctree-l4" href="#openfoam">OpenFOAM</a></li>
+                
+                    <li><a class="toctree-l4" href="#abinit">ABINIT</a></li>
+                
+                    <li><a class="toctree-l4" href="#namd">NAMD</a></li>
+                
+                    <li><a class="toctree-l4" href="#ase">ASE</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Big Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Spark/">Big Data Application Over Apache Spark</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_workflows/README/">Advanced workflows on sequential jobs management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_scheduling/">Advanced scheduling with SLURM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Python/">Prototyping with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ReproducibleResearch/">Reproducible Research</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../rtfd/">Documentation (RTFD)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contacts/">Contacts</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">UL HPC Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>CFD/MD/Chemistry &raquo;</li>
+        
+      
+    
+    <li>Advanced Parallel execution</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>-<em>- mode: markdown; mode: visual-line; fill-column: 80 -</em>-</p>
+<p>Copyright (c) 2015-2017 UL HPC Team  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#45;&#115;&#121;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#64;&#117;&#110;&#105;&#46;&#108;&#117;">&#104;&#112;&#99;&#45;&#115;&#121;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#64;&#117;&#110;&#105;&#46;&#108;&#117;</a></p>
+<hr />
+<h1 id="ul-hpc-mpi-tutorial-running-parallel-software-test-cases-on-cfd-md-chemistry-applications">UL HPC MPI Tutorial: Running parallel software: test cases on CFD / MD / Chemistry applications</h1>
+<p><a href="https://hpc.uni.lu"><img alt="By ULHPC" src="https://img.shields.io/badge/by-ULHPC-blue.svg" /></a> <a href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licence" src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" /></a> <a href="https://github.com/ULHPC/tutorials/issues/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ULHPC/tutorials.svg" /></a> <a href="https://github.com/ULHPC/tutorials/tree/devel/advanced/MultiPhysics"><img alt="Github" src="https://img.shields.io/badge/sources-github-green.svg" /></a> <a href="http://ulhpc-tutorials.readthedocs.io/en/latest/advanced/MultiPhysics/"><img alt="Documentation Status" src="http://readthedocs.org/projects/ulhpc-tutorials/badge/?version=latest" /></a> <a href="https://github.com/ULHPC/tutorials"><img alt="GitHub forks" src="https://img.shields.io/github/stars/ULHPC/tutorials.svg?style=social&amp;label=Star" /></a></p>
+<p>The objective of this session is to exemplify the execution of several common, parallel, Computational Fluid Dynamics, Molecular Dynamics and Chemistry software on the <a href="http://hpc.uni.lu">UL HPC</a> platform.</p>
+<p>Targeted applications include:</p>
+<ul>
+<li><a href="http://www.openfoam.org">OpenFOAM</a>: CFD package for solving complex fluid flows involving chemical reactions, turbulence and heat transfer</li>
+<li><a href="http://www.ks.uiuc.edu/Research/namd">NAMD</a>: parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems</li>
+<li><a href="https://wiki.fysik.dtu.dk/ase">ASE</a>: Atomistic Simulation Environment (Python-based) with the aim of setting up, steering, and analyzing atomistic simulations</li>
+<li><a href="http://www.abinit.org">ABINIT</a>: materials science package implementing DFT, DFPT, MBPT and TDDFT</li>
+<li><a href="http://www.quantum-espresso.org">Quantum Espresso</a>: integrated suite of tools for electronic-structure calculations and materials modeling at the nanoscale</li>
+</ul>
+<p>The tutorial will cover:</p>
+<ol>
+<li>Basics for parallel execution with OAR and SLURM</li>
+<li>different MPI suites available on UL HPC</li>
+<li>running simple test cases in parallel</li>
+<li>running QuantumEspresso in parallel over a single node and over multiple nodes</li>
+<li>running OpenFOAM in parallel over a single node and over multiple nodes</li>
+<li>running ABINIT in parallel over a single node and over multiple nodes</li>
+<li>the interesting case of the ASE toolkit</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>As part of this tutorial several input files will be required and you will need to download them
+before following the instructions in the next sections:</p>
+<p>Or simply clone the full tutorials repository and make a link to this tutorial</p>
+<pre><code>    (gaia-frontend)$&gt; git clone https://github.com/ULHPC/tutorials.git
+    (gaia-frontend)$&gt; ln -s tutorials/advanced/MultiPhysics/ ~/multiphysics-tutorial
+</code></pre>
+<h2 id="basics">Basics</h2>
+<p>Note: you can check out either the instructions for the OAR scheduler (gaia and chaos clusters) or SLURM (for iris).</p>
+<h3 id="oar-basics-for-parallel-execution">OAR basics for parallel execution</h3>
+<p>First of all, we will submit a job with 2 cores on each of 2 compute nodes for 1 hour.
+Please note that the Gaia cluster can be replaced at any point in this tutorial with the Chaos cluster if not enough resources are immediately available.</p>
+<pre><code>   (gaia-frontend)$&gt; oarsub -I -l nodes=2/core=2,walltime=1
+   (node)$&gt;
+</code></pre>
+<p>The OAR scheduler provides several environment variables once we are inside a job, check them out with</p>
+<pre><code>   (node)$&gt; env | grep OAR_
+</code></pre>
+<p>We are interested especially in the environment variable which points to the file containing the list of hostnames reserved for the job.
+This variable is OAR_NODEFILE, yet there are several others pointing to the same (OAR_NODE_FILE, OAR_FILE_NODES and OAR_RESOURCE_FILE).
+Let's check its content:</p>
+<pre><code>   (node)$&gt; cat $OAR_NODEFILE
+</code></pre>
+<p>To get the number of cores available in the job, we can use the wordcount <code>wc</code> utility, in line counting mode:</p>
+<pre><code>   (node)$&gt; cat $OAR_NODEFILE | wc -l
+</code></pre>
+<hr />
+<h3 id="slurm-basics-for-parallel-execution">SLURM basics for parallel execution</h3>
+<p>First of all, we will submit on the iris cluster an interactive job with 2 tasks on each of 2 compute nodes for 1 hour.</p>
+<pre><code>   (iris-frontend)$&gt; srun -p interactive --qos qos-interactive -N 2 --ntasks-per-node 2 --pty bash -i
+   (node)$&gt;
+</code></pre>
+<p>The SLURM scheduler provides several environment variables once we are inside a job, check them out with</p>
+<pre><code>   (node)$&gt; env | grep SLURM_
+</code></pre>
+<p>We are interested especially in the environment variable which lists the compute nodes reserved for the job -- SLURM_NODELIST.
+Let's check its content:</p>
+<pre><code>   (node)$&gt; cat $SLURM_NODELIST
+</code></pre>
+<p>To get the total number of cores available in the job, we can use the wordcount <code>wc</code> utility, in line counting mode:</p>
+<pre><code>   (node)$&gt; srun hostname | wc -l
+</code></pre>
+<p>To get the number of cores available on the current compute node:</p>
+<pre><code>   (node)$&gt; echo $SLURM_CPUS_ON_NODE
+</code></pre>
+<hr />
+<h3 id="mpi-suites-available-on-the-platform">MPI suites available on the platform</h3>
+<h4 id="on-gaia">On Gaia:</h4>
+<p>Now, let's check for the environment modules (available through Lmod) which match MPI (Message Passing Interface) the libraries that provide inter-process communication over a network:</p>
+<pre><code>   (node)$&gt; module avail mpi/
+
+   ---------------------------------------------------- /opt/apps/resif/devel/v1.1-20150414/core/modules/mpi ----------------------------------------------------
+      mpi/OpenMPI/1.6.4-GCC-4.7.2    mpi/OpenMPI/1.8.4-GCC-4.9.2 (D)    mpi/impi/4.1.0.030-iccifort-2013.3.163    mpi/impi/5.0.3.048-iccifort-2015.3.187 (D)
+
+   ------------------------------------------------- /opt/apps/resif/devel/v1.1-20150414/core/modules/toolchain -------------------------------------------------
+      toolchain/gompi/1.4.10    toolchain/iimpi/5.3.0    toolchain/iimpi/7.3.5 (D)
+
+     Where:
+      (D):  Default Module
+
+   Use "module spider" to find all possible modules.
+   Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+</code></pre>
+<p>Perform the same search for the toolchains:</p>
+<pre><code>   (node)$&gt; module avail toolchain/
+</code></pre>
+<p>Toolchains represent sets of compilers together with libraries commonly required to build software, such as MPI, BLAS/LAPACK (linear algebra) and FFT (Fast Fourier Transforms).
+For more details, see <a href="https://github.com/hpcugent/easybuild/wiki/Compiler-toolchains">the EasyBuild page on toolchains</a>.</p>
+<p>For our initial tests we will use the <strong>goolf</strong> toolchain which includes GCC, OpenMPI, OpenBLAS/LAPACK, ScaLAPACK(/BLACS) and FFTW:</p>
+<pre><code>   (node)$&gt; module load toolchain/goolf/1.4.10
+   (node)$&gt; module list
+</code></pre>
+<p>The main alternative to this toolchain (as of June 2015) is <strong>ictce</strong> (toolchain/ictce/7.3.5) that includes the Intel tools icc, ifort, impi and imkl.</p>
+<h4 id="on-iris">On Iris:</h4>
+<pre><code>   (node)$&gt; module avail mpi/
+
+   ----------------------------- /opt/apps/resif/data/stable/default/modules/all ----------------------------------------------------
+      mpi/MVAPICH2/2.2b-GCC-4.9.3-2.25    mpi/OpenMPI/2.1.1-GCC-6.3.0-2.28                       (D)    toolchain/gompi/2017a
+      mpi/OpenMPI/2.1.1-GCC-6.3.0-2.27    mpi/impi/2017.1.132-iccifort-2017.1.132-GCC-6.3.0-2.27        toolchain/iimpi/2017a
+
+     Where:
+      D:  Default Module
+
+   Use "module spider" to find all possible modules.
+   Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+  (node)$&gt; module avail toolchain/
+</code></pre>
+<p>On iris the main two toolchains are <strong>foss</strong> (GCC, OpenMPI, OpenBLAS, ScaLAPACK and FFTW) and <strong>intel</strong> (Intel C/C++/Fortran, MKL).</p>
+<h3 id="simple-test-cases-on-gaia">Simple test cases on Gaia</h3>
+<p>We will now try to run the <code>hostname</code> application, which simply shows a system's host name.
+Check out the differences (if any) between the following executions:</p>
+<pre><code>   (node)$&gt; hostname
+   (node)$&gt; mpirun hostname
+   (node)$&gt; mpirun -n 2 hostname
+   (node)$&gt; mpirun -np 2 hostname
+   (node)$&gt; mpirun -n 4 hostname
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE hostname
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE -n 2 hostname
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE -n 3 hostname
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE -npernode 1 hostname
+</code></pre>
+<p>Note that the <code>hostname</code> application is <em>not</em> a parallel application, with MPI we are simply launching it on the different nodes available in the job.</p>
+<p>Now, we will compile and run a simple <code>hellompi</code> MPI application. Save the following source code in /tmp/hellompi.c :</p>
+<pre><code>   #include &lt;mpi.h&gt;
+   #include &lt;stdio.h&gt;
+   #include &lt;stdlib.h&gt;
+   int main(int argc, char** argv) {
+     MPI_Init(NULL, NULL);
+     int world_size;
+     MPI_Comm_size(MPI_COMM_WORLD, &amp;world_size);
+     int world_rank;
+     MPI_Comm_rank(MPI_COMM_WORLD, &amp;world_rank);
+     char processor_name[MPI_MAX_PROCESSOR_NAME];
+     int name_len;
+     MPI_Get_processor_name(processor_name, &amp;name_len);
+     printf("Hello world from %s, rank %d out of %d CPUs\n", processor_name, world_rank, world_size);
+     MPI_Finalize();
+   }
+</code></pre>
+<p>Compile it:</p>
+<pre><code>   (node)$&gt; cd /tmp
+   (node)$&gt; mpicc -o hellompi hellompi.c
+</code></pre>
+<p>Run it:</p>
+<pre><code>   (node)$&gt; mpirun -hostfile $OAR_NODEFILE ./hellompi
+</code></pre>
+<p>Why didn't it work? Remember we stored this application on a compute node's /tmp directory, which is local to each node, not shared.
+Thus the application couldn't be found (more on this later) on the remote nodes.</p>
+<p>Let's move it to the <code>$HOME</code> directory which is common across the cluster, and try again:</p>
+<pre><code>   (node)$&gt; mv /tmp/hellompi ~/multiphysics-tutorial
+   (node)$&gt; cd ~/multiphysics-tutorial
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE ./hellompi
+</code></pre>
+<p>Now some different error messages are shown, about loading shared libraries, and the execution hangs (stop it with Ctrl-C). Why?
+Remember that on the current node we have loaded the goolf toolchain module, which has populated the environment with important details such as the paths  to applications and libraries. This environment is not magically synchronized across the multiple nodes in our OAR job, thus when the hellompi process is started remotely, some libraries are not found.</p>
+<p>We will explicitly tell mpirun to export two important environment variables to the remote nodes:</p>
+<pre><code>   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE ./hellompi
+</code></pre>
+<p>Now it (should have) worked and we can try different executions:</p>
+<pre><code>   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -n 2 ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -np 2 ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -n 4 ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE -n 2 ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE -n 3 ./hellompi
+   (node)$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE -npernode 1 ./hellompi
+</code></pre>
+<p>At the end of these tests, we clean the environment by running <code>module purge</code>:</p>
+<pre><code>   (node)$&gt; module purge
+   (node)$&gt; module list
+</code></pre>
+<h3 id="simple-test-cases-on-iris">Simple test cases on iris</h3>
+<p>We will use the same <code>hellompi.c</code> code from above, so transfer it to the Iris cluster,
+get an interactive job and let's compile it:</p>
+<pre><code>   (iris-frontend)$&gt; srun -p interactive --qos qos-interactive -N 2 --ntasks-per-node 2 --pty bash -i
+   (node)$&gt; module load toolchain/intel
+   (node)$&gt; mpiicc -o hellompi hellompi.c
+</code></pre>
+<p>Now we will run it in different ways and see what happens:</p>
+<pre><code>   (node)$&gt; srun -n 1 hellompi
+   (node)$&gt; srun -n 2 hellompi
+   (node)$&gt; srun -n 3 hellompi
+   (node)$&gt; srun -n 4 hellompi
+   (node)$&gt; srun hellompi
+</code></pre>
+<p>Note that SLURM's <code>srun</code> knows the environment of your job and this will drive parallel execution, if you do not override it explicitly!</p>
+<h2 id="quantumespresso">QuantumESPRESSO</h2>
+<p>Check for the available versions of QuantumESPRESSO (QE in short), as of June 2015 this shows on the Gaia cluster:</p>
+<pre><code>   (node)$&gt; module spider quantum
+
+   ----------------------------------------------------------------------------------------------------------------------------------------------------------
+     chem/QuantumESPRESSO:
+   ----------------------------------------------------------------------------------------------------------------------------------------------------------
+       Description:
+         Quantum ESPRESSO is an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is
+         based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft). - Homepage: http://www.pwscf.org/
+
+        Versions:
+           chem/QuantumESPRESSO/5.0.2-goolf-1.4.10-hybrid
+           chem/QuantumESPRESSO/5.0.2-goolf-1.4.10
+           chem/QuantumESPRESSO/5.0.2-ictce-5.3.0-hybrid
+           chem/QuantumESPRESSO/5.0.2-ictce-5.3.0
+           chem/QuantumESPRESSO/5.1.2-ictce-7.3.5
+</code></pre>
+<p>One thing we note is that some versions have a <em>-hybrid</em> suffix. These versions are hybrid MPI+OpenMP builds of QE.
+MPI+OpenMP QE can give better performance than the pure MPI versions, by running only one MPI process per node (instead of one MPI process for each core in the job) that creates (OpenMP) threads which run in parallel locally.</p>
+<p>Load the latest QE version:</p>
+<pre><code>   (node)$&gt; module load chem/QuantumESPRESSO/5.1.2-ictce-7.3.5
+</code></pre>
+<p>We will use the PWscf (Plane-Wave Self-Consistent Field) package of QE for our tests.
+Run it in sequential mode, it will wait for your input. You should see a "Parallel version (MPI), running on     1 processors" message, and can stop it with CTRL-C:</p>
+<pre><code>   (node)$&gt; pw.x
+   (node)$&gt; mpirun -n 1 pw.x
+</code></pre>
+<p>Now try the parallel run over all the nodes/cores in the job:</p>
+<pre><code>   (node)$&gt; mpirun -hostfile $OAR_NODEFILE pw.x
+</code></pre>
+<p>Before stopping it, check that pw.x processes are created on the remote node. You will need to:</p>
+<ol>
+<li>open a second connection to the cluster, or a second window if you're using <code>screen</code> or <code>tmux</code></li>
+<li>connect to the job with <code>oarsub -C $JOBID</code></li>
+<li>connect from the head node of the job to the remote job with <code>oarsh $hostname</code></li>
+<li>use <code>htop</code> to show the processes, filter the shown list to see only your user with <code>u</code> and then selecting your username</li>
+</ol>
+<p>Note that this check procedure can be invaluable when you are running an application for the first time, or with new options.
+Generally, some things to look for are:</p>
+<ul>
+<li>that processes <em>are</em> created on the remote node, instead of all of them on the head node (which leads to huge slowdowns)</li>
+<li>the percentage of CPU usage those processes have, for CPU-intensive work, the values in the CPU% column should be close to 100%</li>
+<li>if the values are constantly close to 50%, or 25% (or even less) it may mean that more parallel processes were started than should have on that node (e.g. if all processes are running on the head node) and that they are constantly competing for the same cores, which makes execution very slow</li>
+<li>the number of threads created by each process</li>
+<li>here the number of OpenMP threads, controlled through the OMP_NUM_THREADS environment variable or Intel MKL threads (MKL_NUM_THREADS) may need to be tuned</li>
+</ul>
+<p>Now we will run <code>pw.x</code> to perform electronic structure calculations in the presence of a finite homogeneous electric field, and we will use sample input (PW example10) to calculate high-frequency dielectric constant of bulk Silicon.
+For reference, many examples are given in the installation directory of QE, see <code>$EBROOTQUANTUMESPRESSO/espresso-$EBVERSIONQUANTUMESPRESSO/PW/examples</code>.</p>
+<pre><code>   (node)$&gt; cd ~/multiphysics-tutorial
+   (node)$&gt; cd inputs/qe
+   (node)$&gt; pw.x &lt; si.scf.efield2.in
+</code></pre>
+<p>We will see the calculation progress, this serial execution should take around 2 minutes.</p>
+<p>Next, we will clean up the directory holding output files, and re-run the example in parallel:</p>
+<pre><code>   (node)$&gt; rm -rf out
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE pw.x &lt; si.scf.efield2.in &gt; si.scf.efield2.out
+</code></pre>
+<p>When the execution ends, we can take a look at the last 10 lines of output and check the execution time:</p>
+<pre><code>   (node)$&gt; tail si.scf.efield2.out
+</code></pre>
+<p>You can now try to run the same examples but with the <code>chem/QuantumESPRESSO/5.0.2-goolf-1.4.10-hybrid</code> module.
+Things to test:</p>
+<ul>
+<li>basic execution vs usage of the <code>npernode</code> parameter of OpenMPI's mpirun</li>
+<li>explicitly setting the number of OpenMP threads</li>
+<li>increasing the number of OpenMP threads</li>
+</ul>
+<p>Finally, we clean the environment by running <code>module purge</code>:</p>
+<pre><code>   (node)$&gt; module purge
+   (node)$&gt; module list
+</code></pre>
+<h4 id="on-iris_1">On Iris</h4>
+<p>As of June 2017, the Iris cluster has a newer QuantumESPRESSO available, let us find it:</p>
+<pre><code>   (node)$&gt; module avail Quantum
+
+   --------------------- /opt/apps/resif/data/stable/default/modules/all --------------------------
+      chem/QuantumESPRESSO/6.1-intel-2017a
+</code></pre>
+<p>Using the same input data as above (transfer the input file to Iris) let's run QE in parallel:</p>
+<pre><code>   (node)$&gt; module load chem/QuantumESPRESSO
+   (node)$&gt; srun pw.x &lt; si.scf.efield2.in &gt; si.scf.efield2.out
+</code></pre>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="./www.quantum-espresso.org/wp-content/uploads/Doc/user_guide.pdf">QE: user's guide</a></li>
+<li><a href="http://www.quantum-espresso.org/wp-content/uploads/Doc/user_guide/node16.html">QE: understanding parallelism</a></li>
+<li><a href="http://www.quantum-espresso.org/wp-content/uploads/Doc/user_guide/node17.html">QE: running on parallel machines</a></li>
+<li><a href="http://www.quantum-espresso.org/wp-content/uploads/Doc/user_guide/node18.html">QE: parallelization levels</a></li>
+</ul>
+<h2 id="openfoam">OpenFOAM</h2>
+<p>Check for the available versions of OpenFOAM on Gaia:</p>
+<pre><code>   (node)$&gt; module spider openfoam
+</code></pre>
+<p>We will use the <code>cae/OpenFOAM/2.3.0-goolf-1.4.10</code> version:</p>
+<pre><code>    (node)$&gt; module load cae/OpenFOAM/2.3.0-goolf-1.4.10
+</code></pre>
+<p>We load OpenFOAM's startup file:</p>
+<pre><code>   (node)$&gt; source $FOAM_BASH
+</code></pre>
+<p>Now we will run the <code>reactingParcelFilmFoam</code> solver of OpenFOAM on an example showing the spray-film cooling of hot boxes (lagrangian/reactingParcelFilmFoam/hotBoxes).
+For reference, many examples are given in the installation directory of OpenFOAM, see <code>$FOAM_TUTORIALS</code>.</p>
+<p>Before the main execution, some pre-processing steps:</p>
+<pre><code>   (node)$&gt; cd ~/multiphysics-tutorial/inputs/openfoam
+   (node)$&gt; cp -rf 0.org 0
+   (node)$&gt; blockMesh
+   (node)$&gt; topoSet
+   (node)$&gt; subsetMesh c0 -patch wallFilm -overwrite
+   (node)$&gt; ./patchifyObstacles &gt; log.patchifyObstacles 2&gt;&amp;1
+   (node)$&gt; extrudeToRegionMesh -overwrite
+   (node)$&gt; changeDictionary
+   (node)$&gt; rm -rf system/wallFilmRegion
+   (node)$&gt; cp -r system/wallFilmRegion.org system/wallFilmRegion
+   (node)$&gt; find ./0 -maxdepth 1 -type f -exec sed -i "s/wallFilm/\"(region0_to.*)\"/g" {} \;
+   (node)$&gt; paraFoam -touch
+   (node)$&gt; paraFoam -touch -region wallFilmRegion
+   (node)$&gt; decomposePar -region wallFilmRegion
+   (node)$&gt; decomposePar
+</code></pre>
+<p>Solver execution, note the environment variables we need to export:</p>
+<pre><code>   (node)$&gt; mpirun -x MPI_BUFFER_SIZE -x WM_PROJECT_DIR -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE reactingParcelFilmFoam -parallel
+</code></pre>
+<p>Note that the solver execution will take a long time - you can interrupt and/or test in a larger job, which would require:</p>
+<ul>
+<li>editing the <code>decomposeParDict</code> file to change the <code>numberOfSubdomains</code> directive in order to match the new number of processes</li>
+<li>then rerun the <code>decomposePar</code> commands as above</li>
+</ul>
+<p>Parenthesis: how can you achieve the best (fastest) execution time? Some questions to think about:</p>
+<ul>
+<li>is just increasing the number of cores (oarsub -l core=XYZ) optimal? (no, but why not?)</li>
+<li>is it better if you check the network hierarchy on the Gaia cluster and target nodes 'closer together'? (yes)</li>
+<li>would it be fastest if you run on the fastest (most XYZ GHz) nodes? (not exactly, why?)</li>
+<li>will using OAR properties to target the most recent nodes be the best? (yes but not yet optimal, why not?)</li>
+<li>can you get an additional speedup if you recompile OpenFOAM on the most recent nodes to take advantage of the newer instruction set available in their CPUs? (yes!)</li>
+</ul>
+<p>After the main execution, post-processing steps:</p>
+<pre><code>   (node)$&gt; reconstructPar -region wallFilmRegion
+   (node)$&gt; reconstructPar
+</code></pre>
+<p>You can now try to copy and run additional examples from OpenFOAM, note:</p>
+<ul>
+<li>the ones which include an <code>Allrun-parallel</code> file can be run in parallel</li>
+<li>you can run the <code>Allrun.pre</code> script to prepare the execution</li>
+<li>you have to run yourself further pre-execution instructions from the <code>Allrun-parallel</code> script</li>
+<li>instead of <code>runParallel $application 4</code> you will have to run mpirun with the correct parameters and the particular application name yourself</li>
+<li>last post-processing steps from <code>Allrun-parallel</code> have to be run manually</li>
+</ul>
+<p>Finally, we clean the environment:</p>
+<pre><code>   (node)$&gt; module purge
+   (node)$&gt; module list
+</code></pre>
+<h3 id="references_1">References</h3>
+<ul>
+<li><a href="http://cfd.direct/openfoam/user-guide/">OpenFOAM: user's guide</a></li>
+<li><a href="http://cfd.direct/openfoam/user-guide/running-applications-parallel/">OpenFOAM: running applications in parallel</a></li>
+</ul>
+<h2 id="abinit">ABINIT</h2>
+<p>Check for the available versions of ABINIT on Gaia:</p>
+<pre><code>   (node)$&gt; module spider abinit
+</code></pre>
+<p>As of June 2015 there is only one version, we load it with:</p>
+<pre><code>   (node)$&gt; module load chem/ABINIT
+</code></pre>
+<p>There is no dependency on a MPI suite in the build of ABINIT, we can use the latest Intel toolchain:</p>
+<pre><code>   (node)$&gt; module load toolchain/ictce/7.3.5
+</code></pre>
+<p>We will use one of ABINIT's parallel test cases to exemplify parallel execution.
+For reference, many examples are given in the installation directory of ABINIT, see <code>$EBROOTABINIT/share/abinit-test</code>.</p>
+<pre><code>   (node)$&gt; cd ~/multiphysics-tutorial/inputs/abinit
+   (node)$&gt; mpirun -hostfile $OAR_NODEFILE abinit &lt; si_kpt_band_fft.files
+</code></pre>
+<p>After some initial processing and messages, we will see:</p>
+<pre><code>    finddistrproc.F90:394:WARNING
+    Your input dataset does not let Abinit find an appropriate process distribution with nproc=    4
+    Try to comment all the np* vars and set paral_kgb=    -4 to have advices on process distribution.
+
+    abinit : WARNING -
+     The product of npkpt, npfft, npband and npspinor is bigger than the number of processors.
+     The user-defined values of npkpt, npfft, npband or npspinor will be modified,
+     in order to bring this product below nproc .
+     At present, only a very simple algorithm is used ...
+
+    abinit : WARNING -
+     Set npfft to 1
+
+    initmpi_grid.F90:108:WARNING
+      The number of band*FFT*kpt*spinor processors, npband*npfft*npkpt*npspinor should be
+     equal to the total number of processors, nproc.
+     However, npband   =    2           npfft    =    1           npkpt    =    1           npspinor =    1       and nproc    =    4
+</code></pre>
+<p>As shown above, ABINIT itself can give details into how to tune input parameters for the dataset used.</p>
+<p>Edit the input file <code>si_kpt_band_fft</code> as per ABINIT's instructions, then re-run ABINIT.
+The following message will be shown, with a list of parameters that you will need to edit in <code>si_kpt_band_fft</code>.</p>
+<pre><code>   "Computing all possible proc distrib for this input with nproc less than      4"
+</code></pre>
+<p>Next, ensure you can now run ABINIT on this example to completion.</p>
+<p>Parenthesis: will a parallel application always allow execution on any number of cores? Some questions to think about:</p>
+<ul>
+<li>are there cases where an input problem cannot be split in some particular ways? (yes!)</li>
+<li>are all ways to split a problem optimal for solving it as fast as possible? (no!)</li>
+<li>is it possible to split a problem such that the solver has unbalanced cases and works much slower? (yes)</li>
+<li>is there a generic way to tune the problem in order to be solved as fast as possible? (no, it's domain &amp; application specific!)</li>
+</ul>
+<p>Finally, we clean the environment:</p>
+<pre><code>   (node)$&gt; module purge
+   (node)$&gt; module list
+</code></pre>
+<h3 id="references_2">References</h3>
+<ul>
+<li><a href="http://www.abinit.org/doc/helpfiles/for-v7.2/users/new_user_guide.html">ABINIT: user's guide</a></li>
+<li><a href="http://www.abinit.org/doc/helpfiles/for-v7.2/tutorial/welcome.html">ABINIT: tutorials</a></li>
+</ul>
+<h2 id="namd">NAMD</h2>
+<p><a href="http://www.ks.uiuc.edu/Research/namd/">NAMD</a>, recipient of a 2002 Gordon Bell Award and a 2012 Sidney Fernbach Award, is a parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems. Based on Charm++ parallel objects, NAMD scales to hundreds of cores for typical simulations and beyond 500,000 cores for the largest simulations.</p>
+<p>The latest NAMD 2.12 is available on the <code>iris</code> cluster as of June 2017, and on Debian 8 nodes of <code>gaia</code> as of August 2017, let's check for it:</p>
+<pre><code>    (node)$&gt; module avail NAMD
+
+    --------------------- /opt/apps/resif/data/production/v0.3/default/modules/all -----------------
+       chem/NAMD/2.12-intel-2017a-mpi
+</code></pre>
+<p>We will use one of the benchmark inputs of NAMD to test it, specifically the <a href="http://www.ks.uiuc.edu/Research/namd/utilities/">reference</a>
+<em>STMV (virus) benchmark (1,066,628 atoms, periodic, PME)</em>.</p>
+<pre><code>    (node)$&gt; mkdir namd-test
+    (node)$&gt; cd namd-test
+    (node)$&gt; wget http://www.ks.uiuc.edu/Research/namd/utilities/stmv.tar.gz
+    (node)$&gt; tar xf stmv.tar.gz
+    (node)$&gt; cd stmv
+    (node)$&gt; module load chem/NAMD
+</code></pre>
+<p>Now, we will need to set the <code>outputName</code> parameter within the input file to the path that we want:</p>
+<pre><code>    (node)$&gt; sed -i 's/^outputName.*$/outputName    generated-data/g' stmv.namd
+</code></pre>
+<p>Next we will perform the parallel execution of NAMD, showing its runtime output both on console and storing it to file using <code>tee</code>:</p>
+<h4 id="on-gaia_1">On Gaia</h4>
+<pre><code>    (node)$&gt; mpirun -hostfile $OAR_NODEFILE namd2 stmv.namd | tee out
+</code></pre>
+<h4 id="on-iris_2">On Iris</h4>
+<pre><code>    (node)$&gt; srun namd2 stmv.namd | tee out
+</code></pre>
+<h2 id="ase">ASE</h2>
+<p>ASE is a Python library for working with atoms <a href="https://wiki.fysik.dtu.dk/ase/_downloads/ase-talk.pdf">*</a>.</p>
+<p>ASE can interface with many external codes as <code>calculators</code>: Asap, GPAW, Hotbit, ABINIT, CP2K, CASTEP, DFTB+, ELK, EXCITING, FHI-aims, FLEUR, GAUSSIAN, Gromacs, Jacapo, LAMMPS, MOPAC, NWChem, SIESTA, TURBOMOLE and VASP.</p>
+<h3 id="references_3">References</h3>
+<ul>
+<li><a href="https://wiki.fysik.dtu.dk/ase/tutorials/tutorials.html">ASE: tutorials</a></li>
+<li><a href="https://wiki.fysik.dtu.dk/ase/ase/calculators/calculators.html">ASE: calculators</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Spark/" class="btn btn-neutral float-right" title="Big Data Application Over Apache Spark">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../vm5k/" class="btn btn-neutral" title="Grid5000 - Automatic VM deployment with VM5K"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../vm5k/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Spark/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>High Performance Conjugate Gradient (HPCG) - UL HPC Tutorials</title>
+  
+
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "High Performance Conjugate Gradient (HPCG)";
+    var mkdocs_page_input_path = "advanced/HPCG/README.md";
+    var mkdocs_page_url = "/advanced/HPCG/README/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> UL HPC Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basic Tutorials</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../basic/getting_started/README/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../basic/sequential_jobs/README/">HPC workflow with sequential jobs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Debug/README/">Efficient Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Software Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../RESIF/README/">RESIF</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../EasyBuild/README/">Easybuild</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>MPI</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../OSU_MicroBenchmarks/README/">The OSU Micro-benchmarks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../HPL/README/">High Performance Linpack (HPL)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">High Performance Conjugate Gradient (HPCG)</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ul-hpc-tutorial-hpcg-benchmarking-on-ul-hpc-platform">UL HPC Tutorial: HPCG benchmarking on UL HPC platform</a></li>
+                
+                    <li><a class="toctree-l4" href="#objectives">Objectives</a></li>
+                
+                    <li><a class="toctree-l4" href="#executions-on-a-single-node">Executions on a single node</a></li>
+                
+                    <li><a class="toctree-l4" href="#benchmarking-on-two-nodes">Benchmarking on two nodes</a></li>
+                
+                    <li><a class="toctree-l4" href="#benchmarking-with-openmp-active">Benchmarking with OpenMP active</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Mathematics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../MATLAB1/README/">MATLAB1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../R/README/">R - statistical computing </a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Bio-informatic</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Bioinformatics/README/">Running bioinformatics software</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Galaxy/README/">Galaxy</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel Debuggers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Allinea/README/">Allinea</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../TotalView/README/">TotalView</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Virtualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Vagrant/README/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../vm5k/README/">Grid5000: Automatic VM deployment with VM5K</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel execution</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../ParallelExec/README/">Running parallel software</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced workflows</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../advanced_workflows/README/">Advanced workflows on sequential jobs management</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Documentation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../contributing/">Contributing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../rtfd/">RTFD</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../contacts/">Contacts</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">UL HPC Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>MPI &raquo;</li>
+        
+      
+    
+    <li>High Performance Conjugate Gradient (HPCG)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>-<em>- mode: markdown; mode: auto-fill; fill-column: 80 -</em>-</p>
+<p><code>README.md</code></p>
+<p>Copyright (c) 2015 Valentin Plugaru <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#86;&#97;&#108;&#101;&#110;&#116;&#105;&#110;&#46;&#80;&#108;&#117;&#103;&#97;&#114;&#117;&#64;&#117;&#110;&#105;&#46;&#108;&#117;">&#86;&#97;&#108;&#101;&#110;&#116;&#105;&#110;&#46;&#80;&#108;&#117;&#103;&#97;&#114;&#117;&#64;&#117;&#110;&#105;&#46;&#108;&#117;</a></p>
+<hr />
+<h1 id="ul-hpc-tutorial-hpcg-benchmarking-on-ul-hpc-platform">UL HPC Tutorial: HPCG benchmarking on UL HPC platform</h1>
+<p>The objective of this tutorial is to compile and run one of the newest HPC benchmarks, <a href="http://www.hpcg-benchmark.org/">HPCG</a>, on top of the
+<a href="http://hpc.uni.lu">UL HPC</a> platform.  </p>
+<p>You can work in groups for this training, yet individual work is encouraged to
+ensure you understand and practice the usage of an HPC platform.  </p>
+<p>In all cases, ensure you are able to <a href="https://hpc.uni.lu/users/docs/access.html">connect to the chaos and gaia cluster</a>.</p>
+<pre><code>/!\ FOR ALL YOUR COMPILING BUSINESS, ENSURE YOU WORK ON A COMPUTING NODE
+
+(access)$&gt;  oarsub -I -l nodes=1,walltime=2
+</code></pre>
+<p><strong>Advanced users only</strong>: rely on <code>screen</code> (see
+  <a href="http://support.suso.com/supki/Screen_tutorial">tutorial</a>) on the frontend
+  prior to running any <code>oarsub</code> command to be more resilient to disconnection.  </p>
+<p>The latest version of this tutorial is available on
+<a href="https://github.com/ULHPC/tutorials/tree/devel/advanced/HPCG">Github</a></p>
+<h2 id="objectives">Objectives</h2>
+<p>The High Performance Conjugate Gradient <a href="http://www.hpcg-benchmark.org/">HPCG</a> project is an effort to create a more relevant metric for ranking HPC systems than the High Performance LINPACK (HPL) benchmark, which is currently used in
+the <a href="http://top500.org">Top500</a> ranking.</p>
+<p>HPCG exhibits the following patterns:
+<em> Dense and sparse computations
+</em> Dense and sparse collective operations
+* Data-driven parallelism (unstructured sparse triangular solves)</p>
+<p>For more details, check out:
+<em> <a href="https://software.sandia.gov/hpcg/doc/HPCG-Benchmark.pdf">Toward a New Metric for Ranking High Performance Computing Systems</a>
+</em> <a href="https://software.sandia.gov/hpcg/doc/HPCG-Specification.pdf">Technical specification</a></p>
+<p>HPCG is written in C++, with OpenMP and MPI parallelization capabilities, thus requires a C++ compiler with OpenMP support, and/or a MPI library.</p>
+<p>The objective of this practical session is to compare the performance obtained by running HPCG
+compiled with different compilers and options:</p>
+<ol>
+<li>HPCG + Intel C++ + Intel MPI<ul>
+<li>architecture native build, using the most recent supported instruction set (AVX2/FMA3)</li>
+<li>SSE4.1 instruction set build</li>
+</ul>
+</li>
+<li>HPCG + GNU C++ + Open MPI<ul>
+<li>architecture native build, using the most recent supported instruction set (AVX2/FMA3)</li>
+<li>SSE4.1 instruction set build</li>
+</ul>
+</li>
+</ol>
+<p>The benchmarking tests should be performed on:</p>
+<ul>
+<li>a single node</li>
+<li>two nodes, ideally belonging to the same enclosure</li>
+<li>two nodes, belonging to different enclosures</li>
+</ul>
+<h2 id="executions-on-a-single-node">Executions on a single node</h2>
+<h3 id="high-performance-conjugate-gradient-hpcg-with-the-intel-suite">High Performance Conjugate Gradient (HPCG) with the Intel Suite</h3>
+<p>We are first going to use the
+<a href="http://software.intel.com/en-us/intel-cluster-toolkit-compiler/">Intel Cluster Toolkit Compiler Edition</a>,
+which provides Intel C/C++ and Fortran compilers, Intel MPI &amp; Intel MKL.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="http://hpcg-benchmark.org/">HPCG project</a></li>
+</ul>
+<p>Get the latest release:</p>
+<pre><code>$&gt; mkdir ~/TP &amp;&amp; cd ~/TP
+$&gt; wget https://software.sandia.gov/hpcg/downloads/hpcg-2.4.tar.gz
+$&gt; tar xvzf hpcg-2.4.tar.gz
+$&gt; cd hpcg-2.4     
+$&gt; module avail MPI
+$&gt; module load toolchain/ictce/7.3.5
+$&gt; module list
+Currently Loaded Modules:
+  1) compiler/icc/2015.3.187     3) toolchain/iccifort/2015.3.187            5) toolchain/iimpi/7.3.5                7) toolchain/ictce/7.3.5
+  2) compiler/ifort/2015.3.187   4) mpi/impi/5.0.3.048-iccifort-2015.3.187   6) numlib/imkl/11.2.3.187-iimpi-7.3.50
+$&gt; module show mpi/impi/5.0.3.048-iccifort-2015.3.187
+</code></pre>
+<p>Read the <code>INSTALL</code> file.</p>
+<p>In particular, you'll have to edit a new makefile <code>Make.intel64</code>
+(inspired from <code>setup/Make.MPI_ICPC</code> typically), adapting:</p>
+<ol>
+<li>the CXX variable specifying the C++ compiler (use <code>mpiicpc</code> for the MPI Intel C++ wrapper)</li>
+<li>the CXXFLAGS variable
+with architecture-specific compilation flags (see <a href="https://software.intel.com/en-us/articles/performance-tools-for-software-developers-intel-compiler-options-for-sse-generation-and-processor-specific-optimizations">this Intel article</a>)</li>
+</ol>
+<p>Once the configuration file is prepared, run the compilation with:
+    $&gt; make arch=intel64</p>
+<p>Once compiled, ensure that you are able to run it:</p>
+<pre><code>$&gt; cd bin
+$&gt; cat hpcg.
+$&gt; mkdir intel64-optimized
+$&gt; mv xhpcg intel64-optimized
+$&gt; cd intel64-optimized
+$&gt; ln -s ../hpcg.dat .
+$&gt; mpirun -hostfile $OAR_NODEFILE ./xhpcg
+</code></pre>
+<p>As configured in the default <code>hpcg.dat</code>, HPCG generates a synthetic discretized three-dimensional partial differential equation model problem with Nx=Ny=Nz=104 local subgrid dimensions. NPx, NPy, NPz are a factoring of the MPI process space, giving a global domain dimension of (Nx * NPx ) * (Ny * NPy ) * (Nz * NPz).</p>
+<p>You can tune Nx, Ny, Nz to increase/decrease the problem size, yet take care not to generate a problem whose local node grid representation exceeds computing node memory.</p>
+<p>The result of your experiments will be stored in the directory HPCG was started in, in a <code>HPCG-Benchmark-2.4_$(date).yaml</code> file. Check out the benchmark result (GFLOP/s) in the final summary section:</p>
+<pre><code>$&gt; grep "HPCG result is" $file.yaml
+</code></pre>
+<p>In addition to the architecture optimized build, re-generate xhpcg to with the compiler options to support only the SSE4.1 instruction set (common across all UL HPC computing nodes) and perform the same experiment, in a new <code>intel64-generic</code> directory.</p>
+<h3 id="hpcg-with-gnu-c-and-open-mpi">HPCG with GNU C++ and Open MPI</h3>
+<p>Re-compile HPCG with GNU C++, adapting the setup file  <code>Make.gcc</code> from <code>Make.Linux_MPI</code> to use the <code>mpicxx</code> wrapper and the GCC specific <a href="https://gcc.gnu.org/onlinedocs/gcc-4.9.2/gcc/i386-and-x86-64-Options.html">architecture options</a>.</p>
+<pre><code>$&gt; cd ~/TP
+$&gt; make clean
+$&gt; module purge
+$&gt; module load mpi/OpenMPI/1.8.4-GCC-4.9.2
+$&gt; make arch=gcc
+</code></pre>
+<p>Once compiled, ensure you are able to run it:</p>
+<pre><code>$&gt; cd bin
+$&gt; cat hpcg.dat
+$&gt; mkdir gnu-optimized
+$&gt; mv xhpcg gnu-optimized
+$&gt; cd gnu-optimized
+$&gt; ln -s ../hpcg.dat .
+$&gt; mpirun -x PATH -x LD_LIBRARY_PATH -hostfile $OAR_NODEFILE ./xhpcg
+</code></pre>
+<h2 id="benchmarking-on-two-nodes">Benchmarking on two nodes</h2>
+<p>Restart the benchmarking campaign (for both the Intel and GCC) in the following context:</p>
+<ul>
+<li>
+<p>2 nodes belonging to the same enclosure. Use for that:</p>
+<p>$&gt; oarsub -l enclosure=1/nodes=2,walltime=1 […]</p>
+</li>
+<li>
+<p>2 nodes belonging to the different enclosures:</p>
+<p>$&gt; oarsub -l enclosure=2/core=1,walltime=1 […]</p>
+</li>
+</ul>
+<h2 id="benchmarking-with-openmp-active">Benchmarking with OpenMP active</h2>
+<p>Finally, activate OpenMP support when building HPCG, adapting for the Intel and GCC suites <code>Make.MPI_ICPC_OMP</code> and <code>Make.MPI_GCC_OMP</code> respectively.<br />
+As before, perform single and multiple node benchmarks.</p>
+<p>How is the performance result for the OpenMP+MPI vs MPI-only executions?</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../MATLAB1/README/" class="btn btn-neutral float-right" title="MATLAB1">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../HPL/README/" class="btn btn-neutral" title="High Performance Linpack (HPL)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../HPL/README/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../MATLAB1/README/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Big Data Application Over Apache Spark - UL HPC Tutorials</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Big Data Application Over Apache Spark";
+    var mkdocs_page_input_path = "advanced/Spark/index.md";
+    var mkdocs_page_url = "/advanced/Spark/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> UL HPC Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basic Tutorials</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/getting_started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/sequential_jobs/">HPC workflow with sequential jobs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Debug/">Efficient Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Software Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../EasyBuild/">Easybuild</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../RESIF/">RESIF</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>MPI / Performance Evaluation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../OSU_MicroBenchmarks/">OSU Micro-benchmarks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPL/">High Performance Linpack (HPL)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPCG/">High Performance Conjugate Gradient (HPCG)</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Mathematics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MATLAB1/README/">MATLAB</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../R/">R - statistical computing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Bioinformatics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Bioinformatics/">Running bioinformatics software</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Galaxy/">Galaxy</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel Debuggers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Allinea/">Allinea</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TotalView/">TotalView</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Virtualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Vagrant/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../vm5k/">Grid5000 - Automatic VM deployment with VM5K</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CFD/MD/Chemistry</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MultiPhysics/">Advanced Parallel execution</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Big Data</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Big Data Application Over Apache Spark</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#running-big-data-application-using-apache-spark-on-ul-hpc-platform">Running Big Data Application using Apache Spark on UL HPC platform</a></li>
+                
+                    <li><a class="toctree-l4" href="#objectives">Objectives</a></li>
+                
+                    <li><a class="toctree-l4" href="#building-spark">Building Spark</a></li>
+                
+                    <li><a class="toctree-l4" href="#interactive-usage">Interactive usage</a></li>
+                
+                    <li><a class="toctree-l4" href="#scala-spark-shell">Scala Spark Shell</a></li>
+                
+                    <li><a class="toctree-l4" href="#r-spark-shell">R Spark Shell</a></li>
+                
+                    <li><a class="toctree-l4" href="#running-spark-standalone-cluster">Running Spark standalone cluster</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_workflows/README/">Advanced workflows on sequential jobs management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_scheduling/">Advanced scheduling with SLURM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Python/">Prototyping with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ReproducibleResearch/">Reproducible Research</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../rtfd/">Documentation (RTFD)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contacts/">Contacts</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">UL HPC Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Big Data &raquo;</li>
+        
+      
+    
+    <li>Big Data Application Over Apache Spark</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>-<em>- mode: markdown; mode: visual-line; fill-column: 80 -</em>-</p>
+<p>Copyright (c) 2013-2017 UL HPC Team  <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#112;&#99;&#45;&#115;&#121;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#64;&#117;&#110;&#105;&#46;&#108;&#117;">&#104;&#112;&#99;&#45;&#115;&#121;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#64;&#117;&#110;&#105;&#46;&#108;&#117;</a></p>
+<pre><code>    Time-stamp: &lt;Tue 2017-06-20 11:56 svarrette&gt;
+</code></pre>
+<hr />
+<h1 id="running-big-data-application-using-apache-spark-on-ul-hpc-platform">Running Big Data Application using Apache Spark on UL HPC platform</h1>
+<p><a href="https://hpc.uni.lu"><img alt="By ULHPC" src="https://img.shields.io/badge/by-ULHPC-blue.svg" /></a> <a href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licence" src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" /></a> <a href="https://github.com/ULHPC/tutorials/issues/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ULHPC/tutorials.svg" /></a> <a href="https://github.com/ULHPC/tutorials/tree/devel/advanced/Spark/"><img alt="Github" src="https://img.shields.io/badge/sources-github-green.svg" /></a> <a href="http://ulhpc-tutorials.readthedocs.io/en/latest/advanced/Spark/"><img alt="Documentation Status" src="http://readthedocs.org/projects/ulhpc-tutorials/badge/?version=latest" /></a> <a href="https://github.com/ULHPC/tutorials"><img alt="GitHub forks" src="https://img.shields.io/github/stars/ULHPC/tutorials.svg?style=social&amp;label=Star" /></a></p>
+<p>The objective of this tutorial is to compile and run on <a href="http://spark.apache.org/">Apache Spark</a>  on top of the <a href="http://hpc.uni.lu">UL HPC</a> platform.</p>
+<p><strong>Advanced users only</strong>: rely on <code>screen</code> (see  <a href="http://support.suso.com/supki/Screen_tutorial">tutorial</a> or the <a href="https://hpc.uni.lu/users/docs/ScreenSessions.html">UL HPC tutorial</a> on the  frontend prior to running any <code>oarsub</code> or <code>srun/sbatch</code> command to be more resilient to disconnection.</p>
+<p>The latest version of this tutorial is available on
+<a href="https://github.com/ULHPC/tutorials/tree/devel/advanced/Spark">Github</a></p>
+<h2 id="objectives">Objectives</h2>
+<p><a href="http://spark.apache.org/docs/latest/">Apache Spark</a> is a large-scale data processing engine that performs in-memory computing. Spark offers bindings in Java, Scala, Python and R for building parallel applications.
+high-level APIs in Java, Scala, Python and R, and an optimized engine that supports general execution graphs. It also supports a rich set of higher-level tools including Spark SQL for SQL and structured data processing, MLlib for machine learning, GraphX for graph processing, and Spark Streaming.</p>
+<p>In this tutorial, we are going to build Spark using Easybuild and perform some basic examples.</p>
+<h2 id="building-spark">Building Spark</h2>
+<h3 id="pre-requisite-installing-easybuild">Pre-requisite: Installing Easybuild</h3>
+<p>See also <a href="./../Easybuild">PS3</a>.</p>
+<p>First we are going to install Easybuild following <a href="http://easybuild.readthedocs.io/en/latest/Installation.html">the official instructions</a>.</p>
+<p>Add the following entries to your <code>~/.bashrc</code>:</p>
+<pre><code class="bash">export EASYBUILD_PREFIX=$HOME/.local/easybuild
+export EASYBUILD_MODULES_TOOL=Lmod
+export EASYBUILD_MODULE_NAMING_SCHEME=CategorizedModuleNamingScheme
+# Use the below variable to run:
+#    module use $LOCAL_MODULES
+#    module load tools/EasyBuild
+export LOCAL_MODULES=${EASYBUILD_PREFIX}/modules/all
+</code></pre>
+
+<p>Then source this file to expose the environment variables:</p>
+<pre><code class="bash">$&gt; source ~/.bashrc
+$&gt; echo $EASYBUILD_PREFIX
+/home/users/svarrette/.local/easybuild
+</code></pre>
+
+<p>Now let's install Easybuild following the <a href="http://easybuild.readthedocs.io/en/latest/Installation.html#bootstrapping-easybuild">boostrapping procedure</a></p>
+<pre><code class="bash">$&gt; cd /tmp/
+# download script
+curl -o /tmp/bootstrap_eb.py  https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+
+# install Easybuild
+$&gt; python /tmp/bootstrap_eb.py $EASYBUILD_PREFIX
+
+# Load it
+$&gt; echo $MODULEPATH
+$&gt; module use $LOCAL_MODULES
+$&gt; echo $MODULEPATH
+$&gt; module spider Easybuild
+$&gt; module load tools/EasyBuild
+</code></pre>
+
+<h3 id="search-for-an-easybuild-recipe-for-spark">Search for an Easybuild Recipe for Spark</h3>
+<pre><code class="bash">$&gt; eb -S Spark
+# Try to install the most recent version
+$&gt; eb Spark-2.0.2.eb -Dr    # Dry-run
+$&gt; eb Spark-2.0.2.eb -r
+</code></pre>
+
+<p>This is going to fail because of the Java dependency which is unable to build.
+So we are going to create a custom easyconfig file</p>
+<pre><code class="bash">$&gt; mkdir -p ~/tutorials/Spark
+$&gt; cd ~/tutorials/Spark
+# Check the source easyconfig file
+$&gt; eb -S Spark
+$&gt; cp &lt;path/to&gt;/easyconfigs/s/Spark/Spark-2.0.2.eb  Spark-2.0.2.custom.eb
+</code></pre>
+
+<p>Modify it to ensure a successful build.</p>
+<pre><code class="diff">--- &lt;path/to&gt;/easyconfigs/s/Spark/Spark-2.0.2.eb 2017-06-12 22:16:14.353929000 +0200
++++ Spark-2.0.2.custom.eb 2017-06-12 22:39:59.155061000 +0200
+@@ -15,7 +15,7 @@
+     'http://www.us.apache.org/dist/%(namelower)s/%(namelower)s-%(version)s/',
+ ]
+
+-dependencies = [('Java', '1.7.0_80')]
++dependencies = [('Java', '1.8.0_121')]
+
+ sanity_check_paths = {
+     'files': ['bin/spark-shell'],
+</code></pre>
+
+<p>Build it and load the module</p>
+<pre><code class="bash">$&gt; eb ./Spark-2.0.2.custom.eb
+$&gt; module spider Spark
+$&gt; module load devel/Spark
+</code></pre>
+
+<h2 id="interactive-usage">Interactive usage</h2>
+<p>PySpark is the Spark Python API and exposes Spark Contexts to the Python programming environment. Use <code>--exclusive</code> to allocate an exclusive node, load the spark module, then run the Python Spark shell:</p>
+<pre><code class="bash">$&gt; si --exclusive --ntasks=1 --cpus-per-task=28
+$&gt; module use $LOCAL_MODULE
+$&gt; module load devel/Spark
+$&gt; pyspark
+</code></pre>
+
+<p>After some initialization output, you will see the following:</p>
+<pre><code class="bash">$&gt; pyspark
+Python 2.7.5 (default, Nov  6 2016, 00:28:07)
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux2
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to &quot;WARN&quot;.
+To adjust logging level use sc.setLogLevel(newLevel).
+17/06/12 23:59:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 2.0.2
+      /_/
+
+Using Python version 2.7.5 (default, Nov  6 2016 00:28:07)
+SparkSession available as 'spark'.
+&gt;&gt;&gt;
+</code></pre>
+
+<p>See <a href="https://www.dezyre.com/apache-spark-tutorial/pyspark-tutorial">tutorial</a> for playing with pyspark.</p>
+<h2 id="scala-spark-shell">Scala Spark Shell</h2>
+<p>Spark includes a modified version of the Scala shell that can be used interactively. Instead of running <code>pyspark</code> above, run the <code>spark-shell</code> command:</p>
+<pre><code class="bash">$&gt; spark-shell
+</code></pre>
+
+<p>After some initialization output, a scala shell prompt with the Spark context will be available:</p>
+<pre><code class="bash">Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to &quot;WARN&quot;.
+To adjust logging level use sc.setLogLevel(newLevel).
+17/06/13 00:06:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/06/13 00:06:43 WARN SparkContext: Use an existing SparkContext, some configuration may not take effect.
+Spark context Web UI available at http://172.17.7.30:4040
+Spark context available as 'sc' (master = local[*], app id = local-1497305203669).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.0.2
+      /_/
+
+Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_121)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala&gt;
+</code></pre>
+
+<h2 id="r-spark-shell">R Spark Shell</h2>
+<p>The Spark R API is still experimental. Only a subset of the R API is available -- See the <a href="https://spark.apache.org/docs/latest/sparkr.html">SparkR Documentation</a>.</p>
+<p>Load one of the R modules and then run the SparkR shell:</p>
+<pre><code class="bash">$&gt; module load lang/R
+$&gt; sparkR
+
+R version 3.4.0 (2017-04-21) -- &quot;You Stupid Darkness&quot;
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Launching java with spark-submit command /home/users/svarrette/.local/easybuild/software/devel/Spark/2.0.2/bin/spark-submit   &quot;sparkr-shell&quot; /tmp/Rtmphb0s8J/backend_port180ad365cc6b5
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to &quot;WARN&quot;.
+To adjust logging level use sc.setLogLevel(newLevel).
+17/06/13 00:08:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+ Welcome to
+    ____              __
+   / __/__  ___ _____/ /__
+  _\ \/ _ \/ _ `/ __/  '_/
+ /___/ .__/\_,_/_/ /_/\_\   version  2.0.2
+    /_/
+
+
+ SparkSession available as 'spark'.
+&gt;
+</code></pre>
+
+<h2 id="running-spark-standalone-cluster">Running Spark standalone cluster</h2>
+<ul>
+<li><a href="https://spark.apache.org/docs/latest/cluster-overview.html">Reference Documentation</a></li>
+</ul>
+<p>Spark applications run as independent sets of processes on a cluster, coordinated by the SparkContext object in your main program (called the driver program).</p>
+<p>Specifically, to run on a cluster, the SparkContext can connect to several types of cluster managers (either Spark’s own standalone cluster manager, Mesos or YARN), which allocate resources across applications. Once connected, Spark acquires executors on nodes in the cluster, which are processes that run computations and store data for your application. Next, it sends your application code (defined by JAR or Python files passed to SparkContext) to the executors. Finally, SparkContext sends tasks to the executors to run.</p>
+<p><img alt="" src="https://spark.apache.org/docs/latest/img/cluster-overview.png" /></p>
+<p>There are several useful things to note about this architecture:</p>
+<ol>
+<li>Each application gets its own executor processes, which stay up for the duration of the whole application and run tasks in multiple threads. This has the benefit of isolating applications from each other, on both the scheduling side (each driver schedules its own tasks) and executor side (tasks from different applications run in different JVMs). However, it also means that data cannot be shared across different Spark applications (instances of SparkContext) without writing it to an external storage system.</li>
+<li>Spark is agnostic to the underlying cluster manager. As long as it can acquire executor processes, and these communicate with each other, it is relatively easy to run it even on a cluster manager that also supports other applications (e.g. Mesos/YARN).</li>
+<li>The driver program must listen for and accept incoming connections from its executors throughout its lifetime (e.g., see spark.driver.port in the network config section). As such, the driver program must be network addressable from the worker nodes.</li>
+<li>Because the driver schedules tasks on the cluster, it should be run close to the worker nodes, preferably on the same local area network. If you'd like to send requests to the cluster remotely, it's better to open an RPC to the driver and have it submit operations from nearby than to run a driver far away from the worker nodes.</li>
+</ol>
+<p><strong>Cluster Manager</strong></p>
+<p>Spark currently supports three cluster managers:</p>
+<ul>
+<li><a href="https://spark.apache.org/docs/latest/spark-standalone.html">Standalone</a> – a simple cluster manager included with Spark that makes it easy to set up a cluster.</li>
+<li><a href="https://spark.apache.org/docs/latest/running-on-mesos.html">Apache Mesos</a> – a general cluster manager that can also run Hadoop MapReduce and service applications.</li>
+<li><a href="https://spark.apache.org/docs/latest/running-on-mesos.html">Hadoop YARN</a> – the resource manager in Hadoop 2.</li>
+</ul>
+<p>In this session, we will deploy a <strong>standalone cluster</strong>.</p>
+<p>We will prepare a launcher script that will:</p>
+<ol>
+<li>create a master and the workers</li>
+<li>submit a spark application to the cluster using the <code>spark-submit</code> script</li>
+<li>Let the application run and collect the result</li>
+<li>stop the cluster at the end.</li>
+</ol>
+<p>To facilitate these steps, Spark comes with a couple of scripts you can use to launch or stop your cluster, based on Hadoop's deploy scripts, and available in <code>$EBROOTSPARK/sbin</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sbin/start-master.sh</code></td>
+<td>Starts a master instance on the machine the script is executed on.</td>
+</tr>
+<tr>
+<td><code>sbin/start-slaves.sh</code></td>
+<td>Starts a slave instance on each machine specified in the conf/slaves file.</td>
+</tr>
+<tr>
+<td><code>sbin/start-slave.sh</code></td>
+<td>Starts a slave instance on the machine the script is executed on.</td>
+</tr>
+<tr>
+<td><code>sbin/start-all.sh</code></td>
+<td>Starts both a master and a number of slaves as described above.</td>
+</tr>
+<tr>
+<td><code>sbin/stop-master.sh</code></td>
+<td>Stops the master that was started via the bin/start-master.sh script.</td>
+</tr>
+<tr>
+<td><code>sbin/stop-slaves.sh</code></td>
+<td>Stops all slave instances on the machines specified in the conf/slaves file.</td>
+</tr>
+<tr>
+<td><code>sbin/stop-all.sh</code></td>
+<td>Stops both the master and the slaves as described above.</td>
+</tr>
+</tbody>
+</table>
+<p>We are now going to prepare a launcher scripts to permit passive runs (typically in the <code>{default | batch}</code> queue).
+We will place them in a separate directory as it will host the outcomes of the executions on the UL HPC platform .
+Copy and adapt the <a href="https://github.com/ULHPC/launcher-scripts/blob/devel/slurm/launcher.default.sh">default SLURM launcher</a> you should have a copy in <code>~/git/ULHPC/launcher-scripts/slurm/launcher.default.sh</code></p>
+<pre><code class="bash">$&gt; cd ~/tutorials/Spark/
+$&gt; cp ~/git/ULHPC/launcher-scripts/slurm/launcher.default.sh launcher-spark-pi.sh
+</code></pre>
+
+<p>The launcher will be organized as follows.</p>
+<p>We will first exclusively allocate 2 nodes</p>
+<pre><code class="bash">#!/bin/bash -l
+# Time-stamp: &lt;Sun 2017-06-11 22:13 svarrette&gt;
+##################################################################
+#SBATCH -N 1
+# Exclusive mode is recommended for all spark jobs
+#SBATCH --exclusive
+#SBATCH --ntasks-per-node 1
+### -c, --cpus-per-task=&lt;ncpus&gt;
+###     (multithreading) Request that ncpus be allocated per process
+#SBATCH -c 28
+#SBATCH --time=0-01:00:00   # 1 hour
+#
+#          Set the name of the job
+#SBATCH -J SparkMaster
+#          Passive jobs specifications
+#SBATCH --partition=batch
+#SBATCH --qos qos-batch
+</code></pre>
+
+<p>Then we will load the custom module</p>
+<pre><code class="bash"># Use the RESIF build modules
+if [ -f  /etc/profile ]; then
+   .  /etc/profile
+fi
+
+# Load the {intel | foss} toolchain and whatever module(s) you need
+module purge
+module use $HOME/.local/easybuild/modules/all
+module load devel/Spark
+
+export SPARK_HOME=$EBROOTSPARK
+</code></pre>
+
+<p>Then start the Spark master and worker daemons using the Spark scripts</p>
+<pre><code class="bash"># sbin/start-master.sh - Starts a master instance on the machine the script is executed on.
+$SPARK_HOME/sbin/start-all.sh
+
+export MASTER=spark://$HOSTNAME:7077
+
+echo
+echo &quot;========= Spark Master ========&quot;
+echo $MASTER
+echo &quot;===============================&quot;
+echo
+</code></pre>
+
+<p>Now we can submit an example python Pi estimation script to the Spark cluster with 100 partitions</p>
+<p><em>Note</em>: partitions in this context refers of course to Spark's Resilient Distributed Dataset (RDD) and how the dataset is distributed across the nodes in the Spark cluster.</p>
+<pre><code class="bash">spark-submit --master $MASTER  $SPARK_HOME/examples/src/main/python/pi.py 100
+</code></pre>
+
+<p>Finally, at the end, clean your environment and</p>
+<pre><code class="bash"># sbin/stop-master.sh - Stops the master that was started via the bin/start-master.sh script.
+$SPARK_HOME/sbin/stop-all.sh
+</code></pre>
+
+<p>When the job completes, you can find the Pi estimation result in the slurm output file:</p>
+<pre><code>$&gt; grep Pi slurm-2853.out
+Pi is roughly 3.147861
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../advanced_workflows/README/" class="btn btn-neutral float-right" title="Advanced workflows on sequential jobs management">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../MultiPhysics/" class="btn btn-neutral" title="Advanced Parallel execution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../MultiPhysics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../advanced_workflows/README/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

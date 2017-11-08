@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Advanced scheduling with SLURM - UL HPC Tutorials</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Advanced scheduling with SLURM";
+    var mkdocs_page_input_path = "advanced/advanced_scheduling/index.md";
+    var mkdocs_page_url = "/advanced/advanced_scheduling/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> UL HPC Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Basic Tutorials</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/getting_started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../basic/sequential_jobs/">HPC workflow with sequential jobs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Debug/">Efficient Debugging</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced Software Management</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../EasyBuild/">Easybuild</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../RESIF/">RESIF</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>MPI / Performance Evaluation</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../OSU_MicroBenchmarks/">OSU Micro-benchmarks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPL/">High Performance Linpack (HPL)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../HPCG/">High Performance Conjugate Gradient (HPCG)</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Mathematics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MATLAB1/README/">MATLAB</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../R/">R - statistical computing</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Bioinformatics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Bioinformatics/">Running bioinformatics software</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Galaxy/">Galaxy</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Parallel Debuggers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Allinea/">Allinea</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../TotalView/">TotalView</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Virtualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Vagrant/">Vagrant</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../vm5k/">Grid5000 - Automatic VM deployment with VM5K</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>CFD/MD/Chemistry</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MultiPhysics/">Advanced Parallel execution</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Big Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Spark/">Big Data Application Over Apache Spark</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Advanced topics</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../advanced_workflows/README/">Advanced workflows on sequential jobs management</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Advanced scheduling with SLURM</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ul-hpc-tutorial-advanced-scheduling-with-slurm">UL HPC Tutorial: Advanced scheduling with SLURM</a></li>
+                
+                    <li><a class="toctree-l4" href="#part-one">Part one</a></li>
+                
+                    <li><a class="toctree-l4" href="#part-two-the-harder-stuff">Part two: the harder stuff</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Python/">Prototyping with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ReproducibleResearch/">Reproducible Research</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../rtfd/">Documentation (RTFD)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contributing/">Contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contacts/">Contacts</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">UL HPC Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Advanced topics &raquo;</li>
+        
+      
+    
+    <li>Advanced scheduling with SLURM</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>-<em>- mode: markdown;mode:visual-line;  fill-column: 80 -</em>-</p>
+<p>Copyright (c) 2017 <a href="mailto:&lt;hpc-sysadmins@uni.lu&gt;">ULHPC management team</a> <a href="http://hpc.uni.lu">www</a></p>
+<hr />
+<h1 id="ul-hpc-tutorial-advanced-scheduling-with-slurm">UL HPC Tutorial: Advanced scheduling with SLURM</h1>
+<p><a href="https://hpc.uni.lu"><img alt="By ULHPC" src="https://img.shields.io/badge/by-ULHPC-blue.svg" /></a> <a href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licence" src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" /></a> <a href="https://github.com/ULHPC/tutorials/issues/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ULHPC/tutorials.svg" /></a> <a href="./slides.pdf"><img alt="" src="https://img.shields.io/badge/slides-PDF-red.svg" /></a> <a href="https://github.com/ULHPC/tutorials/tree/devel/advanced/advanced_scheduling/"><img alt="Github" src="https://img.shields.io/badge/sources-github-green.svg" /></a> <a href="http://ulhpc-tutorials.readthedocs.io/en/latest/advanced/advanced_scheduling/"><img alt="Documentation Status" src="http://readthedocs.org/projects/ulhpc-tutorials/badge/?version=latest" /></a> <a href="https://github.com/ULHPC/tutorials"><img alt="GitHub forks" src="https://img.shields.io/github/stars/ULHPC/tutorials.svg?style=social&amp;label=Star" /></a></p>
+<p><a href="./slides.pdf"><img alt="" src="./cover_slides.png" /></a></p>
+<p>The objective of this tutorial is to practice using the SLURM cluster
+workload manager in use on the UL HPC <a href="https://hpc.uni.lu/systems/iris/">iris cluster</a>.</p>
+<p>It's important that you read the <a href="https://github.com/ULHPC/tutorials/blob/devel/advanced/advanced_scheduling/advanced_scheduling.pdf?raw=true">slides</a> first.</p>
+<p>They review, for iris:</p>
+<ol>
+<li>the way SLURM was configured, accounting and permissions</li>
+<li>common and advanced SLURM tools and commands</li>
+<li>SLURM job types</li>
+<li>SLURM generic launchers you can use as a base for your own jobs</li>
+<li>a comparison of SLURM (iris cluster) and OAR (gaia and chaos)</li>
+</ol>
+<h2 id="part-one">Part one</h2>
+<p>You will now get familiar, if not already, with the main tools part of SLURM (otherwise skip down to <a href="#part-two-the-harder-stuff">Part two</a>).</p>
+<p>You must first connect to the iris cluster frontend, e.g. with <code>ssh yourlogin@access-iris.uni.lu -p 8022</code>.</p>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>All the commands used have detailed manuals (<code>man $toolname</code>) that you can always refer to.</li>
+<li>To make interactive jobs easier to launch, a function <code>si</code> exists that starts an interactive job with your parameters and the qos-interactive QOS</li>
+<li>You can override it in your own <code>~/.bashrc</code> with aliases that customizes it for your particular needs, e.g.<ul>
+<li><code>alias si='srun -p interactive --qos qos-interactive --time=0:30:0 --pty bash -i'</code></li>
+<li><code>alias si='srun -p interactive --qos qos-interactive-001 --pty bash -i'</code></li>
+<li><code>alias six='srun -p interactive --qos qos-interactive --x11 --pty bash -i'</code></li>
+</ul>
+</li>
+<li>Users that are part of groups with access to dedicated QOS should use their specific QOS when launching jobs below (e.g. <code>qos-interactive-001</code>)</li>
+</ul>
+<h3 id="partition-queue-and-node-status">Partition (queue) and node status</h3>
+<ul>
+<li>Show queued jobs, show more details ('long' view that includes the job time limit):</li>
+</ul>
+<pre><code>squeue
+squeue -l
+</code></pre>
+
+<p><strong>Question</strong>: are all jobs visible by default? what does <code>squeue -a</code> do?</p>
+<ul>
+<li>Show only the queued jobs of your user (<code>$USER</code> is an environment variable in your shell), then for another specific user:</li>
+</ul>
+<pre><code>squeue -u $USER
+squeue -u vplugaru
+</code></pre>
+
+<ul>
+<li>Show queued jobs in a specific partition:</li>
+</ul>
+<pre><code>squeue -p $partition
+</code></pre>
+
+<ul>
+<li>Show queued jobs that are in a specific state (pending / running / failed / preempted, see <code>man squeue</code> for all available states):</li>
+</ul>
+<pre><code>squeue -t PD
+squeue -t R
+squeue -t F
+squeue -t PR
+</code></pre>
+
+<p><strong>Question</strong>: what other job states exist?</p>
+<ul>
+<li>Show partition status, summarized status (without node state), and node-oriented partition status:</li>
+</ul>
+<pre><code>sinfo
+sinfo -s
+sinfo -N
+</code></pre>
+
+<p><strong>Questions</strong>: What does the 'mix' state in the output of <code>sinfo</code> signify?  What will happen to your jobs if the nodes are 'down' or 'drain'? What will you see when looking at a job with <code>squeue</code> or <code>scontrol show job</code> ?</p>
+<ul>
+<li>Show node reservations that have been created by the administrators for specific users or accounts:</li>
+</ul>
+<pre><code>sinfo -T
+</code></pre>
+
+<ul>
+<li>Show node details (all nodes, specific node):</li>
+</ul>
+<pre><code>scontrol show nodes
+scontrol show nodes $nodename
+</code></pre>
+
+<ul>
+<li>Check the default account your jobs will use:</li>
+</ul>
+<pre><code>sacctmgr show user $USER format=user%20s,defaultaccount%30s
+</code></pre>
+
+<ul>
+<li>See all account associations for your user and the QOS they grant access to:</li>
+</ul>
+<pre><code>sacctmgr list association where users=$USER format=account%30s,user%20s,qos%120s
+</code></pre>
+
+<h3 id="job-submission-and-management">Job submission and management</h3>
+<h4 id="starting-interactive-jobs">Starting interactive jobs</h4>
+<ul>
+<li>Start an interactive job with the default number of cores and walltime:</li>
+</ul>
+<pre><code>srun -p interactive --qos qos-interactive --pty bash -i
+</code></pre>
+
+<p><strong>Question</strong>: now before exiting the job, what does <code>env | grep SLURM</code> give out? What is the walltime for this job?</p>
+<ul>
+<li>Start an interactive job for 3 minutes, with 2 nodes and 4 tasks per node:</li>
+</ul>
+<pre><code>srun -p interactive --qos qos-interactive --time=0:03:0 -N 2 --ntasks-per-node=4 --pty bash -i
+</code></pre>
+
+<p><strong>Question</strong>: can you ssh between the nodes part of this job? what happens if you try to ssh to a different node (not from your job/jobs)? if you are still connected to the job after 3 minutes, what happens?</p>
+<ul>
+<li>Start an interactive job with <em>X11 forwarding</em> such that GUI applications (running in the cluster) will be shown on your workstation:<ul>
+<li>note that your initial connection to the iris cluster needs to have X11 Forwarding enabled, e.g. <code>ssh -X iris-cluster</code></li>
+</ul>
+</li>
+</ul>
+<pre><code>srun -p interactive --qos qos-interactive --pty -x11 bash -i
+</code></pre>
+
+<p><strong>Question</strong>: what happens if you launch a graphical application (e.g. <code>xterm</code>)? did it appear on your own machine? if not, what went wrong?</p>
+<ul>
+<li>Start a best-effort interactive job (can be interrupted by regular jobs if other users submit them):</li>
+</ul>
+<pre><code>srun -p interactive --qos qos-besteffort --pty bash -i
+</code></pre>
+
+<p><strong>Question</strong>: can you make this job be preempted? try to allocate other nodes in the interactive partition and see what happens when the besteffort job is marked for preemption.</p>
+<h4 id="collecting-job-information">Collecting job information</h4>
+<p>Now start a job with one of the previous commands, and you will check its details (runtime metrics, status, after execution statistics, etc.).</p>
+<ul>
+<li>Show the details of a job:</li>
+</ul>
+<pre><code>scontrol show job $jobid
+</code></pre>
+
+<p><strong>Question</strong>: what happens if you try to take a look at a job which is not in the queue (waiting/running) anymore (e.g. <code>scontrol show job 2</code>)?</p>
+<ul>
+<li>Check waiting job priority (detailed view):</li>
+</ul>
+<pre><code>sprio -l
+</code></pre>
+
+<ul>
+<li>Check expected job start time:</li>
+</ul>
+<pre><code>squeue --start -u $USER
+</code></pre>
+
+<ul>
+<li>Show running job (and steps) system-level utilization (memory, I/O, energy):<ul>
+<li>note that <code>sstat</code> information is limited to your own jobs</li>
+</ul>
+</li>
+</ul>
+<pre><code>sstat -j $jobid
+</code></pre>
+
+<ul>
+<li>Show specific statistics from a running job (and steps) or multiple jobs:</li>
+</ul>
+<pre><code>sstat -j $jobid --format=AveCPU,AveRSS,AveVMSize,MaxRSS,MaxVMSize
+sstat -j $jobid1,$jobid2 --format=AveCPU,AveRSS,AveVMSize,MaxRSS,MaxVMSize
+</code></pre>
+
+<ul>
+<li>Output the statistics in a parseable format, delimited by <code>|</code> (with, then without trailing <code>|</code>):</li>
+</ul>
+<pre><code>sstat -p -j $jobid --format=AveCPU,AveRSS,AveVMSize,MaxRSS,MaxVMSize
+sstat -P -j $jobid --format=AveCPU,AveRSS,AveVMSize,MaxRSS,MaxVMSize
+</code></pre>
+
+<ul>
+<li>Show running or completed job (and steps) system-level utilization from the accounting information, and with full details:</li>
+</ul>
+<pre><code>sacct -j $jobid
+sacct -j $jobid -l
+</code></pre>
+
+<p><strong>Question</strong>: remember that job id #2? can we see its information with <code>sacct -j 2 --format=user</code> and <code>sacct -j 2 -l</code> ?</p>
+<ul>
+<li>Show statistics relevant to the job allocation itself not taking steps into consideration, and with more details:</li>
+</ul>
+<pre><code>sacct -X -j $jobid
+sacct -X -j $jobid -l
+</code></pre>
+
+<ul>
+<li>Show a subset of interesting statistics from a completed job and its steps, including:<ol>
+<li>elapsed time in both human readable and total # of seconds</li>
+<li>maximum resident set size of all tasks in job (you may want to add also <code>maxrssnode</code> and <code>maxrsstask</code> for a better understanding of which process consumed memory)</li>
+<li>maximum virtual memory size (idem for <code>maxvmsizenode</code> and <code>maxvmsizetask</code>)</li>
+<li>consumed energy (in Joules), be aware there are many caveats!<ul>
+<li>your job needs to be the only one running on the corresponding compute nodes</li>
+<li>the <a href="http://web.eece.maine.edu/~vweaver/projects/rapl/rapl_support.html">RAPL mechanism</a> will not take into account all possible hardware elements which consume power (CPUs, GPUs and DRAM are included)</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<pre><code>sacct -j $jobid --format=account,user,jobid,jobname,partition,state,elapsed,elapsedraw,start,end,maxrss,maxvmsize,consumedenergy,consumedenergyraw,nnodes,ncpus,nodelist
+</code></pre>
+
+<ul>
+<li>Output the same statistics in the parseable <code>|</code>-delimited format, for a single and multiple jobs:</li>
+</ul>
+<pre><code>sacct -p -j $jobid --format=account,user,jobid,jobname,partition,state,elapsed,elapsedraw,start,end,maxrss,maxvmsize,consumedenergy,consumedenergyraw,nnodes,ncpus,nodelist
+sacct -p -j $jobid1,$jobid2 --format=account,user,jobid,jobname,partition,state,elapsed,elapsedraw,start,end,maxrss,maxvmsize,consumedenergy,consumedenergyraw,nnodes,ncpus,nodelist
+</code></pre>
+
+<ul>
+<li>Show statistics for all personal jobs started since a particular date, then without job steps:</li>
+</ul>
+<pre><code>sacct --starttime 2017-06-12 -u $USER
+sacct -X --starttime 2017-06-12 -u $USER
+</code></pre>
+
+<h4 id="pausing-resuming-and-cancelling-jobs">Pausing, resuming and cancelling jobs</h4>
+<ul>
+<li>To stop a waiting job from being scheduled and later to allow it to be scheduled:</li>
+</ul>
+<pre><code>scontrol hold $jobid
+scontrol release $jobid
+</code></pre>
+
+<p><strong>Question</strong>: what do you see as "Reason" in <code>squeue</code> output on a large (say, 10 nodes interactive) job that you submitted and then ran <code>scontrol hold $jobid</code> on?</p>
+<ul>
+<li>To pause a running job and then resume it:</li>
+</ul>
+<pre><code>scontrol suspend $jobid
+scontrol resume $jobid
+</code></pre>
+
+<p><strong>Question</strong>: what happens when you try to suspend an interactive job?</p>
+<ul>
+<li>To remove a job from the queue (stopping it if already started):</li>
+</ul>
+<pre><code>scancel $jobid
+</code></pre>
+
+<p><strong>Question</strong>: what happens when you cancel a running job, does it get killed immediately?</p>
+<ul>
+<li>To remove a job by name:</li>
+</ul>
+<pre><code>scancel --name=$jobname
+scancel -n $jobname
+</code></pre>
+
+<p><strong>Question</strong>: what happens if you start two jobs with the same name and cancel by name?</p>
+<ul>
+<li>To remove all user jobs:</li>
+</ul>
+<pre><code>scancel --user=$USER
+scancel -u $USER
+</code></pre>
+
+<ul>
+<li>To remove all waiting jobs (<code>pending</code> state) for a given user:</li>
+</ul>
+<pre><code>scancel --user=$USER --state=pending
+scancel -u $USER -t pending
+</code></pre>
+
+<ul>
+<li>To remove all waiting jobs in a given partition (e.g. <strong>batch</strong>):</li>
+</ul>
+<pre><code>scancel -u $USER --partition=batch
+scancel -u $USER -p batch
+</code></pre>
+
+<ul>
+<li>To stop and restart a given job:</li>
+</ul>
+<pre><code>scontrol requeue $jobid
+</code></pre>
+
+<p><strong>Question</strong>: what message do you get when you try to requeue an interactive job?</p>
+<h2 id="part-two-the-harder-stuff">Part two: the harder stuff</h2>
+<p>We have made available a set of template <a href="https://hpc.uni.lu/users/docs/slurm_launchers.html">batch launcher scripts for SLURM</a>.</p>
+<p>You should now:</p>
+<ul>
+<li>adapt the most appropriate one (sequential, parallel, etc.) for your most commonly used HPC application</li>
+<li>launch your own (short execution time) test case, on a single core for sequential code or two distributed cores for parallel code<ul>
+<li>take note of your fair-share and usage values (e.g. with <code>sshare -A $(sacctmgr -n show user $USER format=defaultaccount%30s)</code>)</li>
+</ul>
+</li>
+<li>monitor job progression:<ul>
+<li>with <code>sprio</code> / <code>sprio -l</code> to see its priority in the queue</li>
+<li>using <code>sstat</code> once it starts, to get running metrics</li>
+<li>by connecting to the job (<code>--jobid</code> parameter of <code>srun</code>) and using <code>htop</code></li>
+</ul>
+</li>
+<li>finally, once the job finished or you have stopped it:<ul>
+<li>check the information visible with <code>sacct</code></li>
+<li>how did your fair-share and usage values change?</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Python/" class="btn btn-neutral float-right" title="Prototyping with Python">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../advanced_workflows/README/" class="btn btn-neutral" title="Advanced workflows on sequential jobs management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../advanced_workflows/README/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Python/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
